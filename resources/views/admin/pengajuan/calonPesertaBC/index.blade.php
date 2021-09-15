@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Data Calon Peserta UPK Paket A')
+@section('title', 'Data Calon Peserta Paket B/C')
 
 @section('content')
     <div class="row">
@@ -16,7 +16,7 @@
             <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
-                        <a href="{{ route('upka.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
+                        <a href="{{ route('bc.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
                     </h3>
                 </div>
 
@@ -32,9 +32,9 @@
                                 <th>Nama Ibu</th>
                                 <th>NISN</th>
                                 <th>NIK</th>
-                                <th>Alamat</th>
-                                <th>Scan KTP/AKTE</th>
-                                <th>Scan KK</th>
+                                <th>Pendidikan Terakhir</th>
+                                <th>Tahun Lulus</th>
+                                <th>Scan Ijazah</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -49,9 +49,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
-                                </td>
+                                <td></td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
                                 </td>
@@ -70,9 +68,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
-                                </td>
+                                <td></td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
                                 </td>
@@ -91,9 +87,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
-                                </td>
+                                <td></td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
                                 </td>
@@ -110,19 +104,3 @@
         </div>
     </div>
 @endsection
-
-@push('scripts')
-    <script>
-        $(function () {
-            $('#example1').DataTable()
-            $('#example2').DataTable({
-                'paging'      : true,
-                'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
-            })
-        })
-    </script>
-@endpush

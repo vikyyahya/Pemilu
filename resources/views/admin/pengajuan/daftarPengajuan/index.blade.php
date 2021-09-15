@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-    Daftar Pengajuan
-@endsection
+@section('title', 'Daftar Pengajuan')
 
 @section('content')
     <div class="row">
@@ -15,7 +13,7 @@
                 </div>
             @endif
 
-            <div class="box box-primary">
+            <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
                         <a href="#" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
@@ -126,19 +124,3 @@
         </div>
     </div>
 @endsection
-
-@push('scripts')
-    <script>
-        $(function () {
-            $('#example1').DataTable()
-            $('#example2').DataTable({
-                'paging'      : true,
-                'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
-            })
-        })
-    </script>
-@endpush

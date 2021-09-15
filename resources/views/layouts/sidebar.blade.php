@@ -26,30 +26,19 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview">
-                <a href="{{ route('home.index') }}">
-                    <i class="fa fa-dashboard"></i> <span>Menu Awal</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
+            <li>
+                <a href="{{ route('home.index') }}"> <i class="fa fa-building-o"></i>
+                    <span>Menu Awal</span>
                 </a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-pie-chart"></i>
+            <li>
+                <a href="#"> <i class="fa fa-building-o"></i>
                     <span>Profil</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
                 </a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-laptop"></i>
+            <li>
+                <a href="#"> <i class="fa fa-building-o"></i>
                     <span>Kelengkapan</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
                 </a>
             </li>
             <li class="treeview">
@@ -64,7 +53,7 @@
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-edit"></i> <span>Calon Peserta UPK</U></span>
+                            <i class="fa fa-circle-o"></i> <span>Calon Peserta UPK</U></span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -79,18 +68,18 @@
                     <li><a href="{{ route('sarana.index') }}"><i class="fa fa-circle-o"></i> Sara Prasarana</a></li>
                     <li><a href="{{ route('jadwal.index') }}"><i class="fa fa-circle-o"></i> Jadwal Pelajaran</a></li>
                     <li><a href="{{ route('tutor.index') }}"><i class="fa fa-circle-o"></i> Data Tutor</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Rencana Anggaran Belanja</a></li>
+                    <li><a href="{{ route('rab.index') }}"><i class="fa fa-circle-o"></i> Rencana Anggaran Belanja</a></li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-edit"></i> <span>Calon Peserta</U></span>
+                            <i class="fa fa-circle-o"></i> <span>Calon Peserta</U></span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Paket A</a>
+                            <li><a href="{{ route('a.index') }}"><i class="fa fa-circle-o"></i> Paket A</a>
                             </li>
-                            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Paket B/C</a>
+                            <li><a href="{{ route('bc.index') }}"><i class="fa fa-circle-o"></i> Paket B/C</a>
                             </li>
                         </ul>
                     </li>
