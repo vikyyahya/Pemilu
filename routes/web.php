@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\JadwalPelajaranController;
 use App\Http\Controllers\Admin\TutorController;
 use Illuminate\Support\Facades\Route;
 
+// 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
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
