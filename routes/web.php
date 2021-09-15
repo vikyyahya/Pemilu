@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PengajuanController;
-use App\Http\Controllers\CalonPesertaUpkAController;
-use App\Http\Controllers\CalonPesertaUpkBCController;
-use App\Http\Controllers\SaranaPrasaranaController;
-use App\Http\Controllers\JadwalPelajaranController;
-use App\Http\Controllers\TutorController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PengajuanController;
+use App\Http\Controllers\Admin\CalonPesertaUpkAController;
+use App\Http\Controllers\Admin\CalonPesertaUpkBCController;
+use App\Http\Controllers\Admin\SaranaPrasaranaController;
+use App\Http\Controllers\Admin\JadwalPelajaranController;
+use App\Http\Controllers\Admin\TutorController;
 use Illuminate\Support\Facades\Route;
 
 /*
