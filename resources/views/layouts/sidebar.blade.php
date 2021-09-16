@@ -43,14 +43,7 @@
                     </span>
                 </a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-laptop"></i>
-                    <span>Kelengkapan</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
+            <li><a href="{{ route('kelengkapan.index') }}"><i class="fa fa-book"></i> <span>Kelengkapan</span></a>
             </li>
             <li class="treeview">
                 <a href="#">

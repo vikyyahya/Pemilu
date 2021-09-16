@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\CalonPesertaUpkAController;
 use App\Http\Controllers\Admin\CalonPesertaUpkBCController;
 use App\Http\Controllers\Admin\SaranaPrasaranaController;
 use App\Http\Controllers\Admin\JadwalPelajaranController;
-use App\Http\Controllers\Admin\TutorController;
+use App\Http\Controllers\Admin\KelengkapanController;
+use App\Http\Controllers\Admin\Kel;
 use Illuminate\Support\Facades\Route;
 
 // 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
@@ -55,3 +56,6 @@ Route::get('/jadwal-pelajaran/create', [JadwalPelajaranController::class, 'creat
 //CONTROLLER TUTOR
 Route::get('/tutor', [TutorController::class, 'index'])->name('tutor.index');
 Route::get('/tutor/create', [TutorController::class, 'create'])->name('tutor.create');
+
+//CONTROLLER KELENGKAPAN
+Route::get('/kelengkapan', [KelengkapanController::class, 'index'])->name('kelengkapan.index');
