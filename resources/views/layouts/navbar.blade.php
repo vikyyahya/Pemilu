@@ -2,7 +2,7 @@
     <!-- Logo -->
     <a href="#" class="logo navbar-left">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>S</b>MS</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>SIMESSI</span>
     </a>
