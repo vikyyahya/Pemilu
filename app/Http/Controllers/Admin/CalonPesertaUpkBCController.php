@@ -19,11 +19,11 @@ class CalonPesertaUpkBCController extends Controller
 
     public function ajuanVerifikasi()
     {
-        return view('admin.pengajuan.calonPesertaUpkBC.ajuanVerifikasi');
+        return view('admin.pengajuan.verifikasi.upkBC.index');
     }
 
     public function catatanPenilaian()
     {
-        return view('admin.pengajuan.calonPesertaUpkBC.catatanPenilaian');
+        return view('admin.pengajuan.catatanPenilaian.upkBC.index');
     }
 }

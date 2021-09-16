@@ -16,7 +16,7 @@
             <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
-                        <a href="#" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
+                        <a href="#" class="btn btn-sm btn-plus">Tambah Data <i class="fa fa-user-plus"></i> </a>
                     </h3>
                 </div>
 
