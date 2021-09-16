@@ -13,7 +13,7 @@
                 </div>
             @endif
 
-            <div class="box box-primary">
+            <div class="box box-default">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>

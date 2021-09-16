@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Data Calon Peserta UPK Paket A')
+@section('title', 'Data Calon Peserta Paket A')
 
 @section('content')
     <div class="row">
@@ -16,7 +16,7 @@
             <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
-                        <a href="{{ route('upka.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
+                        <a href="{{ route('a.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
                     </h3>
                 </div>
 
@@ -110,19 +110,3 @@
         </div>
     </div>
 @endsection
-
-@push('scripts')
-    <script>
-        $(function () {
-            $('#example1').DataTable()
-            $('#example2').DataTable({
-                'paging'      : true,
-                'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
-            })
-        })
-    </script>
-@endpush

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('Tambah Data Tutor Paket A-B-C')
+@section('title', 'Data Tutor Paket A-B-C')
 
 @section('content')
     <div class="row">
@@ -13,7 +13,7 @@
                 </div>
             @endif
 
-            <div class="box box-primary">
+            <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
                         <a href="{{ route('tutor.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
@@ -33,7 +33,7 @@
                                 <th>Jurusan</th>
                                 <th>Mata Pelajaran Diampu</th>
                                 <th>Scan SK Tutor</th>
-                                <th>Sacan Ijazah</th>
+                                <th>Scan Ijazah</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
