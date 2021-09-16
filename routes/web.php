@@ -12,6 +12,8 @@ use App\Http\Controllers\Admin\RabController;
 use App\Http\Controllers\Admin\CalonPesertaAController;
 use App\Http\Controllers\Admin\CalonPesertaBCController;
 use App\Http\Controllers\Admin\PelaporanController;
+use App\Http\Controllers\Admin\AjuanProposalController;
+use App\Http\Controllers\Admin\ProfilController;
 use Illuminate\Support\Facades\Route;
 
 // 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
@@ -41,13 +43,13 @@ Route::get('/pengajuan/edit', [PengajuanController::class, 'edit'])->name('penga
 //CONTROLLER CALON PESERTA UPK
 Route::get('/calon-peserta-upk-a', [CalonPesertaUpkAController::class, 'index'])->name('upka.index');
 Route::get('/calon-peserta-upk-a/create', [CalonPesertaUpkAController::class, 'create'])->name('upka.create');
-Route::get('/ajuan-verifikasi-a', [CalonPesertaUpkAController::class, 'ajuanVerifikasi'])->name('ajuan.verifikasi.a');
-Route::get('/catatan-penilaian-a', [CalonPesertaUpkAController::class, 'catatanPenilaian'])->name('catatan.penilaian.a');
+Route::get('/ajuan-verifikasi-upk-a', [CalonPesertaUpkAController::class, 'ajuanVerifikasi'])->name('verifikasi.upka.index');
+Route::get('/catatan-penilaian-upk-a', [CalonPesertaUpkAController::class, 'catatanPenilaian'])->name('catatan.upka.index');
 
 Route::get('/calon-peserta-upk-b-c', [CalonPesertaUpkBCController::class, 'index'])->name('upkbc.index');
 Route::get('/calon-peserta-upk-b-c/create', [CalonPesertaUpkBCController::class, 'create'])->name('upkbc.create');
-Route::get('/ajuan-verifikasi-b', [CalonPesertaUpkBCController::class, 'ajuanVerifikasi'])->name('ajuan.verifikasi.bc');
-Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatanPenilaian'])->name('catatan.penilaian.bc');
+Route::get('/ajuan-verifikasi-upk-b-c', [CalonPesertaUpkBCController::class, 'ajuanVerifikasi'])->name('verifikasi.upkbc.index');
+Route::get('/catatan-penilaian-upk-b-c', [CalonPesertaUpkBCController::class, 'catatanPenilaian'])->name('catatan.upkbc.index');
 
 //CONTROLLER SARANA PRASARANA
 Route::get('/sarana-prasarana', [SaranaPrasaranaController::class, 'index'])->name('sarana.index');
@@ -70,8 +72,7 @@ Route::get('/rab/create', [RabController::class, 'create'])->name('rab.create');
 //CONTROLLER CALON PESERTA
 Route::get('/calon-peserta-a', [CalonPesertaAController::class, 'index'])->name('a.index');
 Route::get('/calon-peserta-a/create', [CalonPesertaAController::class, 'create'])->name('a.create');
-Route::get('/ajuan-verifikasi-a', [CalonPesertaUpkAController::class, 'ajuanVerifikasi'])->name('ajuan.verifikasi.a');
-Route::get('/catatan-penilaian-a', [CalonPesertaUpkAController::class, 'catatanPenilaian'])->name('catatan.penilaian.a');
+Route::get('/ajuan-proposal-a', [AjuanProposalController::class, 'index'])->name('proposal.index');
 
 Route::get('/calon-peserta-b-c', [CalonPesertaBCController::class, 'index'])->name('bc.index');
 Route::get('/calon-peserta-b-c/create', [CalonPesertaBCController::class, 'create'])->name('bc.create');
@@ -80,3 +81,7 @@ Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatan
 
 //PELAPORAN
 Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan.index');
+
+//CONTROLLER PROFIL
+Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
+Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
