@@ -25,7 +25,7 @@
                     <h5>2.  Setelah proposal diajukan maka sudah tidak bisa dilakukan perubahan isi instrumen lagi.</h5>
                     <h5>3.  Anda dapat men-download hasil isian instrumen dan lampiran dengan tombol di bawah ini.</h5>
                     <h3 class="box-title">
-                        <a href="#" class="btn btn-primary btn-sm">Download <i class="fa fa-user-plus"></i> </a>
+                        <a href="#" class="btn btn-sm btn-download">Download <i class="fa fa-download"></i> </a>
                     </h3>
                     <br><br>
                     <h3 class="box-title"><b>Scan Ijazah Terakhir</b></h3>
@@ -68,5 +68,9 @@
             </div>
 
         </div>
+    </div>
+    <div class="text-right">
+        <a href="{{ route('upkbc.index') }}" class="btn btn-back">Kembali</a>
+        <a href="{{ route('catatan.upkbc.index') }}" class="btn btn-next">Lanjut</a>
     </div>
 @endsection

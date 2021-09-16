@@ -27,7 +27,7 @@
                     <h5>4.  Perubahan RAB harus ada Berita Acara Perubahan dan diketahui Dinas Pendidikan Kabupaten Tangerang.</h5>
                     <br>
                     <h3 class="box-title">
-                        <a href="{{ route('rab.create') }}" class="btn btn-primary btn-sm">Tambah <i class="fa fa-user-plus"></i> </a>
+                        <a href="{{ route('rab.create') }}" class="btn btn-sm btn-plus">Tambah <i class="fa fa-user-plus"></i> </a>
                     </h3>
                     <br><br>
                     <h3 class="box-title"><b>Paket A-B-C Global</b></h3>
@@ -132,5 +132,9 @@
             </div>
 
         </div>
+    </div>
+    <div class="text-right">
+        <a href="{{ route('tutor.index') }}" class="btn btn-back">Kembali</a>
+        <a href="{{ route('a.index') }}" class="btn btn-next">Lanjut</a>
     </div>
 @endsection

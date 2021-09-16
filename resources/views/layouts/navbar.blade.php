@@ -1,6 +1,6 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="{{ asset ('assets/index2.html') }}" class="logo">
+    <a href="#" class="logo navbar-left">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -230,16 +230,16 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ asset ('assets/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <img src="{{ asset('assets/images/pns.jpeg') }}" class="user-image" alt="User Image">
+                        <span class="hidden-xs">PKBM Nurul Ilmi</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="{{ asset ('assets/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                            <img src="{{ asset('assets/images/pns.jpeg') }}" class="img-circle" alt="User Image">
 
                             <p>
-                                Alexander Pierce - Web Developer
+                                PKBM Nurul Ilmi - Lembaga Pendidikan
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>

@@ -16,7 +16,7 @@
             <div class="box box-default">
                 <div class="box-header">
                     <h3 class="box-title">
-                        <a href="{{ route('a.create') }}" class="btn btn-primary btn-sm">Tambah Data <i class="fa fa-user-plus"></i> </a>
+                        <a href="{{ route('a.create') }}" class="btn btn-sm btn-plus">Tambah Data <i class="fa fa-user-plus"></i> </a>
                     </h3>
                 </div>
 
@@ -108,5 +108,9 @@
             </div>
 
         </div>
+    </div>
+    <div class="text-right">
+        <a href="{{ route('rab.index') }}" class="btn btn-back">Kembali</a>
+        <a href="{{ route('bc.index') }}" class="btn btn-next">Lanjut</a>
     </div>
 @endsection

@@ -4,10 +4,10 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset ('assets/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('assets/images/pns.jpeg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>PKBM Nurul Ilmi</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li>
-                <a href="#"> <i class="fa fa-building-o"></i>
+                <a href="{{ route('profil.index') }}"> <i class="fa fa-building-o"></i>
                     <span>Profil</span>
                 </a>
             </li>

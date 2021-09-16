@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset ('assets/dist/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{ asset ('assets/dist/css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('assets/dist/css/skins/skin-purple.css') }}">
     <!-- Morris chart -->
     <link rel="stylesheet" href="{{ asset ('assets/bower_components/morris.js/morris.css') }}">
     <!-- jvectormap -->
@@ -39,11 +39,12 @@
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
+    
+    <link rel="stylesheet" href="{{ asset ('assets/dist/css/style.css') }}">
     @yield('css')
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
     <div class="wrapper">
 
         @include('layouts.navbar')
@@ -69,6 +70,8 @@
         </div>
         <!-- /.content-wrapper -->
         @include('layouts.footer')
+
+        <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
 
