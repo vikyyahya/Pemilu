@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\TutorController;
 use App\Http\Controllers\Admin\RabController;
 use App\Http\Controllers\Admin\CalonPesertaAController;
 use App\Http\Controllers\Admin\CalonPesertaBCController;
+use App\Http\Controllers\Admin\PelaporanController;
 use Illuminate\Support\Facades\Route;
 
 // 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
@@ -76,3 +77,6 @@ Route::get('/calon-peserta-b-c', [CalonPesertaBCController::class, 'index'])->na
 Route::get('/calon-peserta-b-c/create', [CalonPesertaBCController::class, 'create'])->name('bc.create');
 Route::get('/ajuan-verifikasi-b', [CalonPesertaUpkBCController::class, 'ajuanVerifikasi'])->name('ajuan.verifikasi.bc');
 Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatanPenilaian'])->name('catatan.penilaian.bc');
+
+//PELAPORAN
+Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan.index');
