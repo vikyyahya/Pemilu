@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\CalonPesertaBCController;
 use App\Http\Controllers\Admin\PelaporanController;
 use App\Http\Controllers\Admin\AjuanProposalController;
 use App\Http\Controllers\Admin\ProfilController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 // 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
@@ -34,7 +35,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //CONTROLLER HOME
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home.index');
 
 //CONTROLLER PENGAJUAN
 Route::get('/pengajuan', [PengajuanController::class, 'index'])->name('pengajuan.index');
@@ -85,3 +87,8 @@ Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan
 //CONTROLLER PROFIL
 Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
 Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
+
+//LOGIN
+Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+Route::post('/login/user', [HomeController::class, 'index'])->name('login_user.index');
+
