@@ -37,11 +37,10 @@
                <div class="brand-col">
                   <div class="headline text-center">
                      <div class="brand-logo">
-                      
                         <img src="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}" width="200" height="230" alt="brand-logo">
                      </div>
-                     <p style="font-size: 24px;" class="text-uppercase"><strong>Dinas Pendidikan Kabupaten Tangerang</strong></p>
-                     <a class="btn btn-lg btn-style2 btn-block" href="/"><font style="color: #46cea1">Halaman Utama</font></a>
+                     <p style="font-size: 24px; color:rgb(255, 255, 255);" class="text-uppercase"><strong>SIMESSI PAUD-DIKMAS</strong></p>
+                     <a class="btn btn-lg btn-style2 btn-block" href="/"><font style="color:rgb(127, 70, 206)">Halaman Utama</font></a>
                   </div>
                </div>
             </div>
@@ -54,7 +53,7 @@
                      </div>
                      <div class="row">
                         <div class="col-xs-12 col-sm-12" style="overflow-y: auto; max-height: 400px;">
-                           <form name="loginForm" class="loginForm" action="/login/user" method="POST">
+                           <form name="loginForm" class="loginForm" action="/dashboard" method="GET">
                               @csrf
                               <div class="form-group wrap-input">
                                  <input type="text" class="form-control" name="username" placeholder="Masukkan Username..." title="Untuk Lembaga, isi Username dengan NPSN" required="" autofocus="" value="">
@@ -72,7 +71,7 @@
                                  </div>
                                  <div class="col-xs-6 col-sm-6">
                                     <p class="forgotPwd">
-                                       <a class="lnk-toggler" data-panel=".panel-forgot" href="https://banper.binsuslat.kemdikbud.go.id/login#">Lupa password?</a>
+                                       <a class="lnk-toggler" data-panel=".panel-forgot" href="">Lupa password?</a>
                                     </p>
                                  </div>
                               </div>
@@ -112,7 +111,6 @@
                                  <select class="form-control" name="pilihan_npsn" id="pilihan_npsn" onchange="cek_pilihan_npsn()" required="">
                                     <option value="1"> Memiliki NPSN Nonformal</option>
                                     <option value="2"> Tidak Memiliki NPSN Nonformal</option>
-                                    <option value="3"> Lembaga Penyelenggara UJK</option>
                                  </select>
                               </div>
                               <div class="form-group wrap-input" id="field_temp_bantuan" style="display: none">

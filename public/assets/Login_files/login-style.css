@@ -23,7 +23,7 @@ h6 {
 body,
 html {
     background-color: #383838;
-    background-image: url(../images/bg-lkp-new-01.png);
+    background-image: url(../images/bg02.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -58,7 +58,7 @@ h6 {
 a,
 a:focus,
 a:hover {
-    color: #3ac697
+    color: rgb(127, 70, 206);
 }
 
 .btn-primary {
@@ -67,22 +67,22 @@ a:hover {
 }
 
 .btn-style1 {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: rgb(127, 70, 206);
+  box-shadow: 0px 15px 20px rgb(127, 70, 206,0.4);
   color: #fff;
   transition: all 0.3s ease 0s;
 }
 
 
 .btn-style1:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);
+  background-color: rgb(127, 70, 206);
+  box-shadow: 0px 5px 20px rgb(127, 70, 206,0.4);
   color: #fff;
   transform: translateY(5px);
 }
 .btn-style2 {
   background-color: #FFFFFF;
-  border-color: #2EE59D;
+  border-color: rgb(127, 70, 206);
   color: #2EE59D;
   transition: all 0.3s ease 0s;
   box-shadow: 0px 5px 20px rgba(113, 113, 113, 0.4);
@@ -124,7 +124,7 @@ a:hover {
 
 .authfy-panel-left {
     box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.09);
-    background-color: rgb(70, 206, 161);
+    background-color: rgb(127, 70, 206);
     color: #fff;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -191,11 +191,11 @@ a:hover {
 
 .authfy-login .auth-title {
 	text-align: left;
-    color: #3AD29F;
+    color: rgb(127, 70, 206);
 }
 
 .authfy-heading .lnk-toggler {
-    color: #3AD29F;
+    color: rgb(127, 70, 206);
 }
 
 .authfy-heading p {
@@ -257,7 +257,7 @@ a:hover {
 }
 
 .authfy-login .forgotPwd a {
-    color: #3AD29F;
+    color: rgb(127, 70, 206);
 }
 
 
@@ -301,7 +301,7 @@ a:hover {
 }
 
 .focus-input:before {
-    background-color: #3AD29F;
+    background-color: rgb(127, 70, 206);
     content: "";
     width: 0;
     height: 2px;
@@ -340,7 +340,7 @@ a:hover {
 .pwdMask .pwd-toggle.fa-eye,
 .pwdMask .pwd-toggle:focus,
 .pwdMask .pwd-toggle:hover {
-    color: #2EE59D
+    color: rgb(127, 70, 206);
 }
 
 .panel-signup .term-policy a {
@@ -471,7 +471,7 @@ a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(70, 206, 161); 
+  background: rgb(127, 70, 206,0.4);
   border-radius: 10px;
 }
 
