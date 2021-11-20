@@ -49,6 +49,15 @@ class ProfilController extends Controller
             'website' => 'required',
             'foto_user' => 'sometimes|nullable|mimes:jpg,jpeg,png|max:1000',
             'deskripsi' => 'required'
+        ],
+        [
+            'npsn.required' => 'NPSN Harus Diisi',
+            'nama_lembaga.required' => 'Nama Lembaga Harus Diisi',
+            'email.required' => 'Email Harus Diisi',
+            'no_telepon.required' => 'NO. Telepon Harus Diisi',
+            'alamat.required' => 'Alamat Harus Diisi',
+            'website.required' => 'Website Harus Diisi',
+            'deskripsi.required' => 'Deskripsi Harus Diisi'
         ]);
 
         if ($validasi->fails()) {
