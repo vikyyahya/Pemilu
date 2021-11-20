@@ -75,4 +75,5 @@ Route::get('/calon-peserta-b-c/create', [CalonPesertaBCController::class, 'creat
 
 //CONTROLLER PROFIL
 Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
-Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
+Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
+Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
