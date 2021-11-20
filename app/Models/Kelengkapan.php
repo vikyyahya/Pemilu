@@ -4,16 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-=======
 use Illuminate\Database\Eloquent\SoftDeletes;
->>>>>>> d403ef1127395125bfa3713ea62fc79e68ed5aaf
 
 class Kelengkapan extends Model
 {
     use HasFactory;
+    use softDeletes;
 
-<<<<<<< HEAD
     protected $table = "kelengkapan";
 
     protected $fillable = [
@@ -43,22 +40,8 @@ class Kelengkapan extends Model
         'institusi_penerbit_akreditasi',
         'scan_sertifikat_akreditasi',
     ];
-=======
-    use softDeletes;
-
-    protected $table = 'kelengkapan';
-	// protected $primaryKey = 'id';
-	// protected $guarded = [];
-	protected $fillable = [
-		'users_id',
-		'deskripsi',
-		'website',
-		'alamat',
-		'foto_user'
-	];
 
     public function user() {
 		return $this->belongsTo(Users::class, 'users_id');
 	}
->>>>>>> d403ef1127395125bfa3713ea62fc79e68ed5aaf
 }

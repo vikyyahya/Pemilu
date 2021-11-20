@@ -36,59 +36,55 @@
                                         
                                         <tr>
                                             <th style="width:50%">NPSN</th>
-                                            <td>- </td>
+                                            <td>{{ $user->npsn ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Nama Lembaga</th>
-                                            <td>- </td>
+                                            <td>{{ $user->nama_lembaga ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th >Alamat – Jalan/Dusun</th>
                                            
-                                            <td>- </td>
+                                            <td>{{ $data_kel->alamat ?? '-' }} </td>
 
                                         </tr>
 
 
                                         <tr>
                                             <th>Kecamatan</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->kecamatan_id ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Desa / Kelurahan</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->kelurahan_id ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Email</th>
-                                            <td>-</td>
+                                            <td>{{ $user->email ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Nama Pimpinan Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->nama_pimpinan_lembaga ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Nomor HP Pimpinan Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->no_hp_pimpinan_lembaga ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>NPWP Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->npwp ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Nama Lembaga di NPWP</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->nama_lembaga_di_npwp ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
-                                            <th>Dokumen NPWP</th>
-                                            <td>-</td>
+                                            <th >Nomor SK Pendirian LembagaIK</th>
+                                            <td>{{ $data_kel->no_sk_pendirian_lembaga ?? '-' }} </td>
                                         </tr>
 
-                                        <tr>
-                                            <th>Dokumen NPWP</th>
-                                            <td>-</td>
-                                        </tr>
 
 
                                     </tbody>
@@ -113,80 +109,71 @@
                             <div class="table-responsive">
                                 <table class="table">
                                     <tbody>
+                                    
                                         <tr>
-                                            <th style="width:50%">Nomor SK Pendirian LembagaIK</th>
-                                            <td>-</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Tanggal SK Pendirian Lembaga</th>
-                                            <td>-</td>
+                                            <th style="width:50%">Tanggal SK Pendirian Lembaga</th>
+                                            <td>{{ $data_kel->tgl_sk_pendiran_lembaga ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Nomor SK Izin Operasional Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->no_sk_izin_opr_lembaga ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Tanggal SK Izin Operasional Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->tgl_sk_izin_opr_lembaga ?? '-' }} </td>
                                         </tr>
 
-                                        <tr>
+                                        {{-- <tr>
                                             <th>Scan SK Izin Operasional Lembaga</th>
                                             <td>-</td>
-                                        </tr>
+                                        </tr> --}}
 
                                         <tr>
                                             <th>Nomor Rekening Bank Lembaga</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->no_rek_bank_lembaga ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Rekening Bank Atas Nama</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->rek_bank_atas_nama ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Nama Bank</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->nama_bank ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Cabang / Unit</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->cab_rek_bank ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Alamat Lembaga pada Buku Rekening</th>
-                                            <td>-</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Scan Rekening Bank</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->alamat_lembaga_pd_buku_rek ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Akreditasi</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->akreditasi ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Hasil Akreditasi</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->hasil_akreditasi ?? '-' }} </td>
                                         </tr>
 
                                         <tr>
                                             <th>Instuisi Penerbit Akreditasi</th>
-                                            <td>-</td>
+                                            <td>{{ $data_kel->institusi_penerbit_akreditasi ?? '-' }} </td>
                                         </tr>
 
-                                        <tr>
+                                        {{-- <tr>
                                             <th>Scan / Fotocopy Sertifikat Akreditasi</th>
                                             <td>-</td>
-                                        </tr>
+                                        </tr> --}}
 
                                     </tbody>
                                 </table>

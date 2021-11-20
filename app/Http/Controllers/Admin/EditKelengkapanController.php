@@ -15,7 +15,13 @@ class EditKelengkapanController extends Controller
     {
         $user = Auth()->user();
         if($user != null){
-            return view('admin.kelengkapan.edit_kelengkapan');
+            $data_kel = Kelengkapan::where('users_id',$user->id)->first();
+            if($data_kel != null){
+                return view('admin.kelengkapan.edit_kelengkapan',compact('user','data_kel'));
+            }else{
+                $data_kel = null;
+                return view('admin.kelengkapan.edit_kelengkapan',compact('user','data_kel'));
+            }
         }else{
             return redirect()->route('login');
         }
@@ -32,7 +38,23 @@ class EditKelengkapanController extends Controller
                 'alamat'=>'required', 
                 'kecamatan'=>'required',
                 'kelurahan'=>'required',
-                'nama_pimpinan'=>'required',
+                'nama_pimpinan_lembaga'=>'required',
+                'no_pimpinan'=>'required',
+                'npwp'=>'required',
+                'nama_lembaga_npwp'=>'required',
+                'alamat_rekening'=>'required',
+                'no_sk_pendirian_lembaga'=>'required',
+                'tgl_sk_pendiran_lembaga'=>'required',
+                'no_sk_izin_opr_lembaga'=>'required',
+                'tgl_sk_izin_opr_lembaga'=>'required',
+                'no_rek_bank_lembaga'=>'required',
+                'rek_bank_atas_nama'=>'required',
+                'nama_bank'=>'required',
+                'cab_rek_bank'=>'required',
+                'alamat_lembaga_pd_buku_rek'=>'required',
+                'akreditasi'=>'required',
+                'hasil_akreditasi'=>'required',
+                'institusi_penerbit_akreditasi'=>'required',
     
                 'dokumen_npwp'=>'required',
                 'scan_sk_izin_opr_lembaga'=>'required',
@@ -45,6 +67,7 @@ class EditKelengkapanController extends Controller
             $dokumen_scan_sk_izin_opr_lembaga = $request->scan_sk_izin_opr_lembaga;
             $dokumen_scan_rek_bank =  $request->scan_rek_bank;
             $dokumen_scan_sertifikat_akreditasi = $request->scan_sertifikat_akreditasi;
+            $dokumen_ttd_pimpinan_lembaga = $request->ttd_pimpinan_lembaga;
     
             $filename_doc_npwp = time().'docnpwp'.'_'.$data_user->id.'.'.$dokumen_npwp->extension();
             $dokumen_npwp->move(public_path('file'),$filename_doc_npwp);
@@ -58,7 +81,10 @@ class EditKelengkapanController extends Controller
             $scan_sertifikat_akreditasi = time().'serakredit'.'_'.$data_user->id.'.'.$dokumen_scan_sertifikat_akreditasi->extension();
             $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$scan_sertifikat_akreditasi);
     
-            $kelengkapan ;
+            $ttd_pimpinan_lembaga = time().'ttd'.'_'.$data_user->id.'.'.$dokumen_ttd_pimpinan_lembaga->extension();
+            $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$ttd_pimpinan_lembaga);
+    
+            $kelengkapan = "" ;
 
             $data_kel = Kelengkapan::where('users_id',$user->id)->first();
 
@@ -73,7 +99,7 @@ class EditKelengkapanController extends Controller
             $kelengkapan->alamat = $request->alamat;
             $kelengkapan->kecamatan_id = $request->kecamatan;
             $kelengkapan->kelurahan_id = $request->kelurahan;
-            $kelengkapan->nama_pimpinan_lembaga = $request->nama_pimpinan;
+            $kelengkapan->nama_pimpinan_lembaga = $request->nama_pimpinan_lembaga;
             $kelengkapan->no_hp_pimpinan_lembaga = $request->no_pimpinan;
             $kelengkapan->npwp = $request->npwp;
             $kelengkapan->nama_lembaga_di_npwp = $request->nama_lembaga_npwp;
@@ -93,7 +119,8 @@ class EditKelengkapanController extends Controller
             $kelengkapan->hasil_akreditasi = $request->hasil_akreditasi;
             $kelengkapan->institusi_penerbit_akreditasi = $request->institusi_penerbit_akreditasi;
             $kelengkapan->scan_sertifikat_akreditasi = $scan_sertifikat_akreditasi;    
-        
+            $kelengkapan->ttd_pimpinan_lembaga =  $ttd_pimpinan_lembaga;
+
             if($data_kel == null){
                 $kelengkapan->save();
             }else{
