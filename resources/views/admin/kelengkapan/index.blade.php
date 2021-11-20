@@ -3,202 +3,203 @@
 @section('title', 'Kelengkapan')
 
 @section('content')
-    <div class="box box-default">
+    <div>
         <div class="box-header with-border">
             {{-- <h3 class="box-title">Kelengkapan</h3> --}}
 
             <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                {{-- <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button> --}}
+                {{-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button> --}}
             </div>
         </div>
 
         <form action="#" method="post" enctype="multipart/form-data">
             @csrf
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="nama">NPSN</label>
-                            <input type="text" class="form-control" id="npsn" name="npsn" placeholder="NPSN">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nama">Nama Lembaga</label>
-                            <input type="text" class="form-control" id="nama_lembaga" name="nama_lembaga" placeholder="Nama Lembaga">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="alamat">Alamat – Jalan/Dusun</label>
-                            <textarea name="alamat" id="alamat" rows="4" class="form-control" placeholder="AlaAlamat – Jalan/Dusunmat"></textarea>
-                        </div>   
-
-                        <div class="form-group">
-                            <label>Kecamatan</label>
-                            <select class="form-control" name="jk" id="jk" style="width: 100%;" required>
-                                <option> -- Pilih -- </option>
-                                <option value="Lelaki">Kronjo</option>
-                                <option value="Perempuan">Pasar Kemis</option>
-                                <option value="Perempuan">Cikupa</option>
-                                <option value="Perempuan">Tiga Raksa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Desa / Kelurahan</label>
-                            <select class="form-control" name="jk" id="jk" style="width: 100%;" required>
-                                <option> -- Pilih -- </option>
-                                <option value="Perempuan">Pasar Kemis</option>
-                                <option value="Perempuan">Cikupa</option>
-                                <option value="Perempuan">Tiga Raksa</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nama">Email</label>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nama">Nama Pimpinan Lembaga</label>
-                            <input type="text" class="form-control" id="nama_pimpinan" name="nama_pimpinan" placeholder="Nama Pimpinan Lembaga">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nama">Nomor HP Pimpinan Lembaga</label>
-                            <input type="text" class="form-control" id="no_pimpinan" name="no_pimpinan" placeholder="Nomor HP Pimpinan Lembaga">
-                        </div>
-                       
-                        {{-- <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="tempat_lahir">Tempat Lahir</label>
-                                    <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahit">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="tanggal_lahir">Tanggal Lahir</label>
-                                    <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir">
-                                </div>
-                            </div>
+            <div class="text-right" style="margin-bottom: 10px">
+                {{-- <a href="{{ route('upka.index') }}" class="btn btn-info ">Ubah</a> --}}
+                <a href="{{ route('editkelengkapan.index') }}" class="btn btn-info ">Ubah</a>
+            </div>
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="box box-default">
+                        {{-- <div class="box-header with-border">
+                            <h3 class="box-title">Quick Example</h3>
                         </div> --}}
 
-                        <div class="form-group">
-                            <label for="nama_ibu">NPWP Lembaga</label>
-                            <input type="text" class="form-control" id="npwp" name="npwp" placeholder="NPWP Lembaga">
-                        </div>
-                        <div class="form-group">
-                            <label for="nisn">Nama Lembaga di NPWP</label>
-                            <input type="text" class="form-control" id="nama_lembaga_npwp" name="nama_lembaga_npwp" placeholder="Nama Lembaga di NPWP">
-                        </div>
+                        <div>
 
-                        <div class="form-group">
-                            <label for="foto_ka">Dokumen NPWP</label>
-                            <input type="file" class="form-control" id="foto_ka" name="foto_ka" placeholder="Scan K-A">
-                            <p class="text-danger">File PDF Max 5MB</p>
-                        </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <th style="width:50%">NPSN</th>
+                                            <td>- </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nama Lembaga</th>
+                                            <td>- </td>
+                                        </tr>
 
-                        <div class="form-group">
-                            <label for="alamat">Tanda Tangan Pimpinan Lembaga</label>
-                            <textarea name="alamat_rekening" id="alamat_rekening" rows="4" class="form-control" placeholder="Tanda Tangan Pimpinan Lembaga"></textarea>
-                        </div>   
+                                        <tr>
+                                            <th >Alamat – Jalan/Dusun</th>
+                                           
+                                            <td>- </td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <th>Kecamatan</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Desa / Kelurahan</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nama Pimpinan Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nomor HP Pimpinan Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>NPWP Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nama Lembaga di NPWP</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Dokumen NPWP</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Dokumen NPWP</th>
+                                            <td>-</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="nik">Nomor SK Pendirian LembagaIK</label>
-                            <input type="text" class="form-control" id="nik" name="nik" placeholder="Nomor SK Pendirian Lembaga">
+
+                </div>
+
+
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="box box-default">
+                        {{-- <div class="box-header with-border">
+                            <h3 class="box-title">Quick Example</h3>
+                        </div> --}}
+
+                        <div>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th style="width:50%">Nomor SK Pendirian LembagaIK</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Tanggal SK Pendirian Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Nomor SK Izin Operasional Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Tanggal SK Izin Operasional Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Scan SK Izin Operasional Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Nomor Rekening Bank Lembaga</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Rekening Bank Atas Nama</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Nama Bank</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Cabang / Unit</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Alamat Lembaga pada Buku Rekening</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Scan Rekening Bank</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Akreditasi</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Hasil Akreditasi</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Instuisi Penerbit Akreditasi</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Scan / Fotocopy Sertifikat Akreditasi</th>
+                                            <td>-</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="nik">Tanggal SK Pendirian Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_lembaga" name="tgl_sk_lembaga" placeholder="Tanggal SK Pendirian Lembaga">
-                        </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="nik">Nomor SK Izin Operasional Lembaga</label>
-                            <input type="text" class="form-control" id="no_sk" name="no_sk" placeholder="Nomor SK Izin Operasional Lembaga">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Tanggal SK Izin Operasional Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_izin_operasi" name="tgl_sk_izin_operasi" placeholder="Tanggal SK Izin Operasional Lembaga">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="foto_ka">Scan SK Izin Operasional Lembaga</label>
-                            <input type="file" class="form-control" id="foto_ka" name="foto_ka" placeholder="Scan SK Izin Operasional Lembaga">
-                            <p class="text-danger">File PDF Max 2MB</p>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Nomor Rekening Bank Lembaga</label>
-                            <input type="text" class="form-control" id="no_rek_bank_lembaga" name="no_rek_bank_lembaga" placeholder="Nomor Rekening Bank Lembaga">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Rekening Bank Atas Nama</label>
-                            <input type="text" class="form-control" id="no_rek_bank_atas_nama" name="no_rek_bank_atas_nama" placeholder="Rekening Bank Atas Nama">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Nama Bank</label>
-                            <input type="text" class="form-control" id="nama_bank" name="nama_bank" placeholder="Nama Bank">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Cabang / Unit</label>
-                            <input type="text" class="form-control" id="cabang_bank" name="cabang_bank" placeholder="Cabang / Unit">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="alamat">Alamat Lembaga pada Buku Rekening</label>
-                            <textarea name="alamat_rekening" id="alamat_rekening" rows="4" class="form-control" placeholder="Alamat Lembaga pada Buku Rekening"></textarea>
-                        </div>   
-
-                        <div class="form-group">
-                            <label for="foto_kk">Scan Rekening Bank</label>
-                            <input type="file" class="form-control" id="foto_kk" name="foto_kk" placeholder="Scan Rekening Bank">
-                            <p class="text-danger">File PDF Max 2MB</p>
-                        </div>
-
-                       
-
-                        <div class="form-group">
-                            <label>Akreditasi</label>
-                            <select class="form-control" name="jk" id="jk" style="width: 100%;" required>
-                                <option> -- Pilih -- </option>
-                                <option value="Perempuan">Sudah Akreditasi</option>
-                                <option value="Perempuan">Belum Akreditasi</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Hasil Akreditasi</label>
-                            <input type="text" class="form-control" id="nama_bank" name="nama_bank" placeholder="Hasil Akreditasi">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nik">Instuisi Penerbit Akreditasi</label>
-                            <input type="text" class="form-control" id="nama_bank" name="nama_bank" placeholder="Hasil Akreditasi">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="foto_kk">Scan / Fotocopy Sertifikat Akreditasi</label>
-                            <input type="file" class="form-control" id="foto_kk" name="foto_kk" placeholder="Scan / Fotocopy Sertifikat Akreditasi">
-                            <p class="text-danger">File PDF Max 2MB</p>
-                        </div>
-
-                    </div> 
                 </div>
             </div>
-                
+
             <div class="box-footer">
-                <div class="text-center">
-                    <a href="#" class="btn btn-danger">Batal</a>
-                    <a href="{{ route('upka.index') }}" class="btn btn-info">Simpan</a>
-                </div>
+
             </div>
         </form>
 

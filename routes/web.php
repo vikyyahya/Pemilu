@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CalonPesertaUpkBCController;
 use App\Http\Controllers\Admin\SaranaPrasaranaController;
 use App\Http\Controllers\Admin\JadwalPelajaranController;
 use App\Http\Controllers\Admin\KelengkapanController;
+use App\Http\Controllers\Admin\EditKelengkapanController;
 use App\Http\Controllers\Admin\TutorController;
 use App\Http\Controllers\Admin\RabController;
 use App\Http\Controllers\Admin\CalonPesertaAController;
@@ -67,6 +68,8 @@ Route::get('/tutor/create', [TutorController::class, 'create'])->name('tutor.cre
 
 //CONTROLLER KELENGKAPAN
 Route::get('/kelengkapan', [KelengkapanController::class, 'index'])->name('kelengkapan.index');
+Route::get('/editkelengkapan', [EditKelengkapanController::class, 'index'])->name('editkelengkapan.index');
+Route::post('/addKelengkapan', [EditKelengkapanController::class, 'create'])->name('addKelengkapan.create');
 //CONTROLLER RAB
 Route::get('/rab', [RabController::class, 'index'])->name('rab.index');
 Route::get('/rab/create', [RabController::class, 'create'])->name('rab.create');
