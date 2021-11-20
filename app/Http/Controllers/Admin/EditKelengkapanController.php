@@ -32,10 +32,13 @@ class EditKelengkapanController extends Controller
         ]);
         $data_user = Auth()->user();
         $dokumen_npwp = $request->dokumen_npwp;
+        $dokumen_scan_sk_izin_opr_lembaga = $request->scan_sk_izin_opr_lembaga;
 
         $filename_doc_npwp = time().'docnpwp'.'_'.$data_user->id.'.'.$dokumen_npwp->extension();
         $dokumen_npwp->move(public_path('file'),$filename_doc_npwp);
 
+        $scan_sk_izin_opr_lembaga = time().'skizinoprlbg'.'_'.$data_user->id.'.'.$dokumen_scan_sk_izin_opr_lembaga->extension();
+        $dokumen_scan_sk_izin_opr_lembaga->move(public_path('file'),$scan_sk_izin_opr_lembaga);
 
 
         $kelengkapan = new Kelengkapan;
@@ -48,6 +51,13 @@ class EditKelengkapanController extends Controller
         $kelengkapan->npwp = $request->npwp;
         $kelengkapan->nama_lembaga_di_npwp = $request->nama_lembaga_npwp;
         $kelengkapan->dokumen_npwp = $filename_doc_npwp;
+        $kelengkapan->no_sk_pendirian_lembaga = $request->no_sk_pendirian_lembaga;
+        $kelengkapan->tgl_sk_pendiran_lembaga = $request->tgl_sk_pendiran_lembaga;
+        $kelengkapan->no_sk_izin_opr_lembaga = $request->no_sk_izin_opr_lembaga;
+        $kelengkapan->tgl_sk_izin_opr_lembaga = $request->tgl_sk_izin_opr_lembaga;
+        $kelengkapan->scan_sk_izin_opr_lembaga = $scan_sk_izin_opr_lembaga;
+
+        return $request;
 
         // 'alamat',
         // 'kecamatan_id',

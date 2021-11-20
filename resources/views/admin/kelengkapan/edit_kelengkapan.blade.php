@@ -123,31 +123,31 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="nik">Nomor SK Pendirian LembagaIK</label>
-                            <input type="text" class="form-control" id="nik" name="nik"
+                            <input type="text" class="form-control" id="no_sk_pendirian_lembaga" name="no_sk_pendirian_lembaga"
                                 placeholder="Nomor SK Pendirian Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Tanggal SK Pendirian Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_lembaga" name="tgl_sk_lembaga"
+                            <input type="date" class="form-control" id="tgl_sk_pendiran_lembaga" name="tgl_sk_pendiran_lembaga"
                                 placeholder="Tanggal SK Pendirian Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Nomor SK Izin Operasional Lembaga</label>
-                            <input type="text" class="form-control" id="no_sk" name="no_sk"
+                            <input type="text" class="form-control" id="no_sk_izin_opr_lembaga" name="no_sk_izin_opr_lembaga"
                                 placeholder="Nomor SK Izin Operasional Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Tanggal SK Izin Operasional Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_izin_operasi" name="tgl_sk_izin_operasi"
+                            <input type="date" class="form-control" id="tgl_sk_izin_opr_lembaga" name="tgl_sk_izin_opr_lembaga"
                                 placeholder="Tanggal SK Izin Operasional Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="foto_ka">Scan SK Izin Operasional Lembaga</label>
-                            <input type="file" class="form-control" id="foto_ka" name="foto_ka"
+                            <input type="file" class="form-control" id="scan_sk_izin_opr_lembaga" name="scan_sk_izin_opr_lembaga"
                                 placeholder="Scan SK Izin Operasional Lembaga">
                             <p class="text-danger">File PDF Max 2MB</p>
                         </div>
