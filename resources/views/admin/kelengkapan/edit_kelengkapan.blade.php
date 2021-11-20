@@ -109,7 +109,8 @@
 
                         <div class="form-group">
                             <label for="foto_ka">Dokumen NPWP</label>
-                            <input type="file" class="form-control" id="dokumen_npwp" name="dokumen_npwp" placeholder="Scan K-A">
+                            <input type="file" class="form-control" id="dokumen_npwp" name="dokumen_npwp"
+                                placeholder="Scan K-A">
                             <p class="text-danger">File PDF Max 5MB</p>
                         </div>
 
@@ -123,32 +124,32 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="nik">Nomor SK Pendirian LembagaIK</label>
-                            <input type="text" class="form-control" id="no_sk_pendirian_lembaga" name="no_sk_pendirian_lembaga"
-                                placeholder="Nomor SK Pendirian Lembaga">
+                            <input type="text" class="form-control" id="no_sk_pendirian_lembaga"
+                                name="no_sk_pendirian_lembaga" placeholder="Nomor SK Pendirian Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Tanggal SK Pendirian Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_pendiran_lembaga" name="tgl_sk_pendiran_lembaga"
-                                placeholder="Tanggal SK Pendirian Lembaga">
+                            <input type="date" class="form-control" id="tgl_sk_pendiran_lembaga"
+                                name="tgl_sk_pendiran_lembaga" placeholder="Tanggal SK Pendirian Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Nomor SK Izin Operasional Lembaga</label>
-                            <input type="text" class="form-control" id="no_sk_izin_opr_lembaga" name="no_sk_izin_opr_lembaga"
-                                placeholder="Nomor SK Izin Operasional Lembaga">
+                            <input type="text" class="form-control" id="no_sk_izin_opr_lembaga"
+                                name="no_sk_izin_opr_lembaga" placeholder="Nomor SK Izin Operasional Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Tanggal SK Izin Operasional Lembaga</label>
-                            <input type="date" class="form-control" id="tgl_sk_izin_opr_lembaga" name="tgl_sk_izin_opr_lembaga"
-                                placeholder="Tanggal SK Izin Operasional Lembaga">
+                            <input type="date" class="form-control" id="tgl_sk_izin_opr_lembaga"
+                                name="tgl_sk_izin_opr_lembaga" placeholder="Tanggal SK Izin Operasional Lembaga">
                         </div>
 
                         <div class="form-group">
                             <label for="foto_ka">Scan SK Izin Operasional Lembaga</label>
-                            <input type="file" class="form-control" id="scan_sk_izin_opr_lembaga" name="scan_sk_izin_opr_lembaga"
-                                placeholder="Scan SK Izin Operasional Lembaga">
+                            <input type="file" class="form-control" id="scan_sk_izin_opr_lembaga"
+                                name="scan_sk_izin_opr_lembaga" placeholder="Scan SK Izin Operasional Lembaga">
                             <p class="text-danger">File PDF Max 2MB</p>
                         </div>
 
@@ -160,8 +161,8 @@
 
                         <div class="form-group">
                             <label for="nik">Rekening Bank Atas Nama</label>
-                            <input type="text" class="form-control" id="no_rek_bank_atas_nama"
-                                name="no_rek_bank_atas_nama" placeholder="Rekening Bank Atas Nama">
+                            <input type="text" class="form-control" id="rek_bank_atas_nama" name="rek_bank_atas_nama"
+                                placeholder="Rekening Bank Atas Nama">
                         </div>
 
                         <div class="form-group">
@@ -172,19 +173,19 @@
 
                         <div class="form-group">
                             <label for="nik">Cabang / Unit</label>
-                            <input type="text" class="form-control" id="cabang_bank" name="cabang_bank"
+                            <input type="text" class="form-control" id="cab_rek_bank" name="cab_rek_bank"
                                 placeholder="Cabang / Unit">
                         </div>
 
                         <div class="form-group">
                             <label for="alamat">Alamat Lembaga pada Buku Rekening</label>
-                            <textarea name="alamat_rekening" id="alamat_rekening" rows="4" class="form-control"
+                            <textarea name="alamat_lembaga_pd_buku_rek" id="alamat_lembaga_pd_buku_rek" rows="4" class="form-control"
                                 placeholder="Alamat Lembaga pada Buku Rekening"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="foto_kk">Scan Rekening Bank</label>
-                            <input type="file" class="form-control" id="foto_kk" name="foto_kk"
+                            <input type="file" class="form-control" id="scan_rek_bank" name="scan_rek_bank"
                                 placeholder="Scan Rekening Bank">
                             <p class="text-danger">File PDF Max 2MB</p>
                         </div>
@@ -193,28 +194,28 @@
 
                         <div class="form-group">
                             <label>Akreditasi</label>
-                            <select class="form-control" name="jk" id="jk" style="width: 100%;" required>
+                            <select class="form-control" name="akreditasi" id="akreditasi" style="width: 100%;" required>
                                 <option> -- Pilih -- </option>
-                                <option value="Perempuan">Sudah Akreditasi</option>
-                                <option value="Perempuan">Belum Akreditasi</option>
+                                <option value="S">Sudah Akreditasi</option>
+                                <option value="B">Belum Akreditasi</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Hasil Akreditasi</label>
-                            <input type="text" class="form-control" id="nama_bank" name="nama_bank"
+                            <input type="text" class="form-control" id="hasil_akreditasi" name="hasil_akreditasi"
                                 placeholder="Hasil Akreditasi">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Instuisi Penerbit Akreditasi</label>
-                            <input type="text" class="form-control" id="nama_bank" name="nama_bank"
+                            <input type="text" class="form-control" id="institusi_penerbit_akreditasi" name="institusi_penerbit_akreditasi"
                                 placeholder="Hasil Akreditasi">
                         </div>
 
                         <div class="form-group">
                             <label for="foto_kk">Scan / Fotocopy Sertifikat Akreditasi</label>
-                            <input type="file" class="form-control" id="foto_kk" name="foto_kk"
+                            <input type="file" class="form-control" id="scan_sertifikat_akreditasi" name="scan_sertifikat_akreditasi"
                                 placeholder="Scan / Fotocopy Sertifikat Akreditasi">
                             <p class="text-danger">File PDF Max 2MB</p>
                         </div>

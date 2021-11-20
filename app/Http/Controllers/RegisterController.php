@@ -33,7 +33,7 @@ class RegisterController extends Controller
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
-                'password'=> $request->password,
+                'password'=> bcrypt($request['password']),
                 'role_id'=> 2,
             ]);
         }else if ($stringnpsn[0]=='L') {
@@ -43,7 +43,7 @@ class RegisterController extends Controller
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
-                'password'=> $request->password,
+                'password'=> bcrypt($request['password']),
                 'role_id'=> 3,
             ]);
     
@@ -53,7 +53,7 @@ class RegisterController extends Controller
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
-                'password'=> $request->password,
+                'password'=> bcrypt($request['password']),
                 'role_id'=> 3,
             ]);
            
