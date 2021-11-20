@@ -91,7 +91,8 @@ Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan
 
 //CONTROLLER PROFIL
 Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
-Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
+Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
+Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
 
 //LOGIN
 // Route::get('/login', [LoginController::class, 'index'])->name('login.index');
