@@ -44,7 +44,14 @@
     @yield('css')
 </head>
 
+@if(auth()->user()->role_id == 2)
+    <body class="hold-transition sidebar-mini" style="background-color:#96030d" >
+@elseif(auth()->user()->role_id == 3)
 <body class="hold-transition skin-purple sidebar-mini">
+@elseif(auth()->user()->role_id == 4)
+<body class="hold-transition sidebar-mini" style="background-color:#fccf53">
+@endif
+
     <div class="wrapper">
 
         @include('layouts.navbar')

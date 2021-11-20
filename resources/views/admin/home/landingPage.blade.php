@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Simessi</title>
-  <link rel="shortcut icon" type="image/icon" href="https://banper.binsuslat.kemdikbud.go.id/assets/login/images/favicon.png">
+  <link rel="shortcut icon" type="image/icon" href="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -53,7 +53,7 @@
             <a class="nav-link" href="#feedback-section">Alur</a>
           </li> --}}
           <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-            <a href="/login" class="btn btn-success" >Masuk</a>
+            <a href="{{route('login')}}" class="btn btn-success" >Masuk</a>
           </li>
         </ul>
       </div>
@@ -80,7 +80,7 @@
   <div class="row align-items-center ml-5 mr-5">
     <div class="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
       <center class="mb-3"> <h1 style="color:rgb(136, 49, 235);">SIMESSI</h1></center>
-        <img src="{{ asset ('landing-page/images/ilustrasi-01.png') }}" class="img-fluid mt-3" style="max-height: 300px" alt="">
+        <img src="{{ asset ('assets/images/simessi-001.png') }}" class="img-fluid mt-3" style="max-height: 300px" alt="">
     </div>
     <div class="col-lg-7 col-md-7">
         <div class="title-heading mt-4">
@@ -113,7 +113,7 @@
         <div class="d-md-flex justify-content-between">
           <div class="grid-margin d-flex justify-content-start">
             <div class="features-width">
-              <img src="{{asset ('landing-page/images/pic-1.png')}}" alt="" class="img-icons">
+              <img src="{{asset ('assets/images/logo-simessi1.png')}}" width="250px" alt="" class="img-icons">
               <h5 class="py-3">Kesetaraan - Keaksaraan</h5>
               <p class="text-muted">Sie Kesetaraan - Keaksaraan adalah seksie layanan pendidikan yang berorientasi pada Program Pendidikan Kesetaraan ( Program Paket A/setara SD, Program Paket B/setara SMP, Program Paket C/setara SMA ) dan Program Pendidikan Keaksaraan.</p>
               {{-- <a href="#"><p class="readmore-link">Readmore</p></a>   --}}
@@ -121,7 +121,7 @@
           </div>
           <div class="grid-margin d-flex justify-content-center">
             <div class="features-width">
-              <img src="{{asset ('landing-page/images/pic-2.png')}}" alt="" class="img-icons">
+              <img src="{{asset ('assets/images/logo-simessi2.png')}}" width="250px" alt="" class="img-icons">
               <h5 class="py-3">Pendidikan Anak Usia Dini</h5>
               <p class="text-muted">Sie PAUD adalah seksie layanan pendidikan anak usia dini untuk memberikan bekal pengetahuan paling awal, keterampilan dasar, dan pembentukan karakter dalam mempersiapkan potensi diri untuk melanjutkan ke tingkat pendidikan yang lebih tinggi.</p>
               {{-- <a href="#"><p class="readmore-link">Readmore</p></a> --}}
@@ -129,7 +129,7 @@
           </div>
           <div class="grid-margin d-flex justify-content-end">
             <div class="features-width">
-              <img src="{{asset ('landing-page/images/pic-3.png')}}" alt="" class="img-icons">
+              <img src="{{asset ('assets/images/logo-simessi3.png')}}" width="250px" alt="" class="img-icons">
               <h5 class="py-3">Kursus - Kelembagaan</h5>
               <p class="text-muted">Sie Kursus - Kelembagaan adalah seksie layanan pendidikan melalui kursus dan pelatihan untuk memberikan bekal pengetahuan, keterampilan dan menumbuhkan sikap mental dalam mengelola potensi diri dan lingkungan yang dapat dijadikan bekal untuk menjalani tahap kehidupan lebih baik.</p>
               {{-- <a href="#"><p class="readmore-link">Readmore</p></a> --}}
@@ -149,18 +149,29 @@
 
       <section class="digital-marketing-service" id="digital-marketing-section">
         <div class="row align-items-center">
+        <div class="grid-margin d-flex justify-content-center">
+            <div class="features-width">
+              <img src="{{asset ('assets/images/logo-simessi2.png')}}" width="250px" alt="" class="img-icons">
+              <h5 class="py-3">Pendidikan Anak Usia Dini</h5>
+              <p class="text-muted">Sie PAUD adalah seksie layanan pendidikan anak usia dini untuk memberikan bekal pengetahuan paling awal, keterampilan dasar, dan pembentukan karakter dalam mempersiapkan potensi diri untuk melanjutkan ke tingkat pendidikan yang lebih tinggi.</p>
+              {{-- <a href="#"><p class="readmore-link">Readmore</p></a> --}}
+            </div>
+          </div>
+
+        </div>
+        <div class="row align-items-center">
           
-          <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
+          <div class="col-8 col-lg-12 grid-margin grid-margin-lg-0" data-aos="fade-left">
+          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
+            <img src="{{asset ('landing-page/images/alur-1.png')}}" alt="" class="img-fluid">
+          </div>
             <h3 class="m-0 " style="color:rgb(94, 214, 180);">LANGKAH 1</h3>
             <h3 class="m-0 " style="color:rgb(49, 52, 235);">Daftarkan Lembaga Anda</h3>
             <div class="col-lg-7 col-xl-6 p-0">
               <p class="py-4 m-0 text-muted">Sebelum daftar, pastikan lembaga Anda sudah memenuhi kriteria lembaga penyelenggara pendidikan non formal yang mempunyai NPSN.</p>
             </div>    
           </div>
-          
-          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
-            <img src="{{asset ('landing-page/images/alur-1.png')}}" alt="" class="img-fluid">
-          </div>
+
         </div>
 
 

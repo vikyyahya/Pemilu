@@ -16,7 +16,9 @@ use App\Http\Controllers\Admin\PelaporanController;
 use App\Http\Controllers\Admin\AjuanProposalController;
 use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+
 
 // 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
 
@@ -37,7 +39,7 @@ use Illuminate\Support\Facades\Route;
 
 //CONTROLLER HOME
 Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home.index');
+
 
 //CONTROLLER PENGAJUAN
 Route::get('/pengajuan', [PengajuanController::class, 'index'])->name('pengajuan.index');
@@ -92,6 +94,33 @@ Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
 Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
 
 //LOGIN
-Route::get('/login', [LoginController::class, 'index'])->name('login.index');
-Route::post('/login/user', [HomeController::class, 'index'])->name('login_user.index');
+// Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+// Route::post('/login/user', [HomeController::class, 'index'])->name('login_user.index');
+Route::get('/login',[LoginController::class, 'index'])->name('login');
+Route::post('/loginProses', [LoginController::class, 'loginProses'])->name('loginProses');
 
+//REGISTER
+Route::get('register',[RegisterController::class, 'index'])->name('register.index');
+Route::post('tambah',[RegisterController::class, 'store']);
+
+
+Route::group(['middleware' => ['auth']], function (){
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+});
+
+// //ROLE PKBM
+// Route::group(['middleware' => ['auth','pkbm:2']], function (){
+//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+// });
+
+// //ROLE LKP
+// Route::group(['middleware' => ['auth','lkp:4']], function (){
+//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+// });
+
+// //ROLE PAUD
+// Route::group(['middleware' => ['auth','Paud:3']], function (){
+//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+//     Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+// });

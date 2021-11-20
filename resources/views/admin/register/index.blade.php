@@ -8,7 +8,7 @@
    <meta name="keywords" content="">
    <meta name="author" content="">
    <title>SIMESSI - Kabupaten Tangerang</title>
-   <link rel="shortcut icon" type="image/icon" href="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}">
+   <link rel="shortcut icon" type="image/icon" href="https://banper.binsuslat.kemdikbud.go.id/assets/login/images/favicon.png">
    {{-- <link rel="stylesheet" href="./Login_files/lightgallery.css"> --}}
    {{-- <link rel="stylesheet" href="./Login_files/login-style.css"> --}}
    <link rel="stylesheet" href="{{ asset ('assets/Login_files/login-style.css') }}">
@@ -47,89 +47,18 @@
             <div class="col-sm-7 authfy-panel-right">
                <div class="authfy-login">
                   <div class="authfy-panel panel-login text-center active">
-                     <div class="authfy-heading">
-                     @if (session('login'))
-                  <div class="alert alert-danger alert-dismissible show fade">
-                    <div class="alert-body">
-                      <button class="close" data-dismiss="alert">
-                        <span>×</span>
-                      </button>
-                      {{ session('login') }}
-                    </div>
-                  </div>
-                @elseif (session('regist'))
-                  <div class="alert alert-success alert-dismissible show fade">
-                    <div class="alert-body">
-                      <button class="close" data-dismiss="alert">
-                        <span>×</span>
-                      </button>
-                      {{ session('regist') }}
-                    </div>
-                  </div>
-                @endif
-                        <h3 class="auth-title">Masuk dengan Akun Anda</h3>
-                        <p>Masukkan Username dan Password anda dibawah ini.</p>                        
-                     </div>
                      <div class="row">
-                        <div class="col-xs-12 col-sm-12" style="overflow-y: auto; max-height: 400px;">
-                           <form name="loginForm"  action="{{route('loginProses')}}" method="POST">
-                              @csrf
-                              <div class="form-group wrap-input">
-                                 <input type="text" class="form-control" name="npsn" placeholder="Masukkan NPSN..." id="npsn" required="" autofocus="" value="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div class="form-group wrap-input">
-                                 <div class="pwdMask">
-                                    <input type="password" class="form-control password" name="password" title="Masukkan Password" placeholder="Masukkan Password..." required="">
-                                    <span class="focus-input"></span>
-                                    <span class="fa fa-eye-slash pwd-toggle"></span>
-                                 </div>
-                              </div>
-                              <div class="row remember-row">
-                                 <div class="col-xs-6 col-sm-6">
-                                 </div>
-                                 <div class="col-xs-6 col-sm-6">
-                                    <p class="forgotPwd">
-                                       <a class="lnk-toggler" data-panel=".panel-forgot" href="">Lupa password?</a>
-                                    </p>
-                                 </div>
-                              </div>
-                              <div class="form-group">
-                                 <button class="btn btn-lg btn-style1 btn-block" type="submit">Masuk</button>
-                                 <br>
-                                 <a href="{{url('register')}}">Belum Memiliki Akun? Silahkan Registrasi dahulu.</a>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div> 
-                  <div class="authfy-panel panel-role-signup text-center">
-                     <div class="headline">
-                        <div class="authfy-heading">
-                           <h3 class="auth-title">Registrasi Sebagai :</h3>
-                        </div>
-                        <div class="row social-buttons" style="margin-top: 40px">
-                           <div class="col-xs-12 col-sm-12 col-md-12">
-                              <a class="lnk-toggler btn btn-lg btn-style1 btn-block" style="box-shadow: 0px 10px 5px rgba(46, 229, 157, 0.4)" data-panel=".panel-signup" href="https://banper.binsuslat.kemdikbud.go.id/login#"> Lembaga</a>
-                           </div>
-                        </div>
-                        <br><br>
-                        <a class="lnk-toggler" data-panel=".panel-login" href="https://banper.binsuslat.kemdikbud.go.id/login#">Sudah Memiliki Akun?</a>
-                     </div>
-                  </div>
-                  <div class="authfy-panel panel-signup text-center">
-                     <div class="row">
-                        <div style="overflow-y: scroll; height: 400px;" class="col-xs-12 col-sm-12">
+                     <div style="overflow-y: scroll; height: 400px;" class="col-xs-12 col-sm-12">
                            <div class="authfy-heading">
                               <h3 class="auth-title">Lembaga</h3>
                               <p>Isikan data pendaftaran anda melalui form dibawah ini.</p>
                            </div>
-                           <form name="signupForm" class="signupForm" action="{{ url('/login') }}" method="GET" enctype="multipart/form-data">
-                           <div class="form-group wrap-input" id="field_temp_bantuan" style="display: none">
+                           <form name="signupForm" class="signupForm" action="{{ url('tambah') }}" method="POST" enctype="multipart/form-data">
+                             @csrf
+                              <div class="form-group wrap-input" id="field_temp_bantuan" style="display: none">
                                  <select class="form-control" name="temp_bantuan" id="temp_bantuan">
                                     <option> Pilih Jenis Bantuan</option>
                                     <option value="pkk"> PKK</option>
-                                    @csrf
                                     <option value="pkw"> PKW</option>
                                  </select>
                               </div>
@@ -137,8 +66,8 @@
                                  <input type="text" class="form-control" autocomplete="off" id="npsn" name="npsn" placeholder="NPSN Nonformal" required="">
                                  <span class="focus-input"></span>
                               </div>
-                              <div class="form-group wrap-input">
-                                 <input type="text" class="form-control" name="nama" placeholder="Nama Lembaga" title="Nama Lembaga" required="">
+                              <div class="form-group wrap-input" id="form_nama_lembaga_isian">
+                                 <input type="text" class="form-control" autocomplete="off" id="nama_lembaga" name="nama_lembaga" placeholder="Nama Lembaga" required="">
                                  <span class="focus-input"></span>
                               </div>
                               <div class="form-group wrap-input">
@@ -158,95 +87,20 @@
                                     <input type="file" title="Cukup Cover Saja" class="form-control" id="file_upload" name="file_upload" accept="*" disabled="" style="padding: 3px !important">
                                  </div>
                               </div>
-                              <div class="form-group">
-                                 <button class="btn btn-lg btn-style1 btn-block" type="submit">Daftar Sekarang</button>
-                              </div>
-                           </form>
-                           <a class="lnk-toggler" data-panel=".panel-login" href="https://banper.binsuslat.kemdikbud.go.id/login#">Sudah Memiliki Akun?</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="authfy-panel panel-signup-dinas text-center">
-                     <div class="row">
-                        <div style="overflow-y: scroll; height: 400px;" class="col-xs-12 col-sm-12">
-                           <div class="authfy-heading">
-                              <h3 class="auth-title">Dinas</h3>
-                           </div>
-                           <style type="text/css">
-                              #label_form{
-                                 text-align: left;
-                              }
-                           </style>
-                           <form name="signupForm" class="signupForm" action="https://banper.binsuslat.kemdikbud.go.id/Login/on_register_dinas" method="POST" enctype="multipart/form-data">
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Provinsi</label>
-                                 <select class="form-control" id="provinsi" name="provinsi" onchange="get_kabupaten()" required="">
-                                    <option selected="" hidden="" disabled="">Pilih Provinsi</option>
-                                    <option value="010000">Prop. D.K.I. Jakarta</option><option value="020000">Prop. Jawa Barat</option><option value="030000">Prop. Jawa Tengah</option><option value="040000">Prop. D.I. Yogyakarta</option><option value="050000">Prop. Jawa Timur</option><option value="060000">Prop. Aceh</option><option value="070000">Prop. Sumatera Utara</option><option value="080000">Prop. Sumatera Barat</option><option value="090000">Prop. Riau</option><option value="100000">Prop. Jambi</option><option value="110000">Prop. Sumatera Selatan</option><option value="120000">Prop. Lampung</option><option value="130000">Prop. Kalimantan Barat</option><option value="140000">Prop. Kalimantan Tengah</option><option value="150000">Prop. Kalimantan Selatan</option><option value="160000">Prop. Kalimantan Timur</option><option value="170000">Prop. Sulawesi Utara</option><option value="180000">Prop. Sulawesi Tengah</option><option value="190000">Prop. Sulawesi Selatan</option><option value="200000">Prop. Sulawesi Tenggara</option><option value="210000">Prop. Maluku</option><option value="220000">Prop. Bali</option><option value="230000">Prop. Nusa Tenggara Barat</option><option value="240000">Prop. Nusa Tenggara Timur</option><option value="250000">Prop. Papua</option><option value="260000">Prop. Bengkulu</option><option value="270000">Prop. Maluku Utara</option><option value="280000">Prop. Banten</option><option value="290000">Prop. Bangka Belitung</option><option value="300000">Prop. Gorontalo</option><option value="310000">Prop. Kepulauan Riau</option><option value="320000">Prop. Papua Barat</option><option value="330000">Prop. Sulawesi Barat</option><option value="340000">Prop. Kalimantan Utara</option><option value="350000">Luar Negeri</option>                                 </select>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Kabupaten</label>
-                                 <select class="form-control" id="kabupaten" name="kabupaten" onchange="set_kabupaten()" disabled="" required="">
-                                    <option selected="" hidden="" disabled="">Pilih Kabupaten</option>
-                                 </select>
-                                 <input type="hidden" id="value_kabupaten" value="">
+                              <div class="form-group wrap-input" id="no_telepon">
+                                 <input type="text" class="form-control" autocomplete="off" id="no_telepon" name="no_telepon" placeholder="Nomor Handphone" required="">
                                  <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Nama Dinas</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="nama" id="nama" placeholder="Tuliskan Nama Dinas" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Username</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="username" placeholder="Tuliskan Username" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Password</label>
-                                 <input type="password" autocomplete="off" class="form-control" name="password" placeholder="Tuliskan Password">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Nama</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="nama_orang" placeholder="Tuliskan Nama" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>NIP</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="nip" placeholder="Tuliskan NIP" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Jabatan</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="jabatan" placeholder="Tuliskan Jabatan" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Email</label>
-                                 <input type="email" autocomplete="off" class="form-control" name="email" placeholder="Tuliskan Email (disarankan GMAIL)" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label>Nomor Kontak</label>
-                                 <input type="text" autocomplete="off" class="form-control" name="no_kontak" placeholder="Tuliskan Nomor Kontak" value="" required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div id="label_form" class="form-group wrap-input">
-                                 <label title="Cukup Cover Saja" style="color: #a0a0a0">Upload Berkas<br>(Surat dari Kepala Dinas)</label><br>
-                                 <div class="form-label-group" style="margin-bottom : 13px">
-                                    <input type="file" title="Cukup Cover Saja" class="form-control" id="file_upload" name="file_upload" accept="*" style="padding: 3px !important">
-                                 </div>
                               </div>
                               <div class="form-group">
                                  <button class="btn btn-lg btn-style1 btn-block" type="submit">Daftar Sekarang</button>
                               </div>
                            </form>
-                           <a class="lnk-toggler" data-panel=".panel-login" href="https://banper.binsuslat.kemdikbud.go.id/login#">Sudah Memiliki Akun?</a>
+                           <a href="{{url('/login')}}">Sudah Memiliki Akun?</a>
                         </div>
                      </div>
-                  </div>
-                  
+                  </div> 
+                
+                
                   <script type="text/javascript" async="" src="{{ asset ('assets/Login_files/analytics.js') }}"></script><script type="text/javascript">
                      function get_kabupaten(kode_provinsi, value_kabupaten=null){
                         document.getElementById('kabupaten').setAttribute('disabled', 'disabled');
@@ -277,84 +131,13 @@
                         document.getElementById("nama").value = "Dinas "+kabupaten;
                      }
                   </script>
-                  <div class="authfy-panel panel-forgot">
-                     <div class="row">
-                        <div class="col-xs-12 col-sm-12">
-                           <div class="authfy-heading">
-                              <h3 class="auth-title">Reset password</h3>
-                              <p>Masukkan alamat email yang terdaftar. <br>Password baru akan dikirimkan ke Email.</p>
-                           </div>
-                           <form name="forgetForm" class="forgetForm" action="{{ url('/login') }}" method="GET">
-                              @csrf
-                              <div class="form-group wrap-input">
-                                 <input type="email" class="form-control" name="email" placeholder="Masukkan Alamat Email..." required="">
-                                 <span class="focus-input"></span>
-                              </div>
-                              <div class="form-group">
-                                 <button class="btn btn-lg btn-style1 btn-block" type="submit">Reset password</button>
-                              </div>
-                              <br>
-                              <div class="form-group">
-                                 <a class="lnk-toggler" data-panel=".panel-login" href="{{ url('/login') }}">Sudah Memiliki Akun?</a>
-                              </div>
-                              <div class="form-group">
-                                 <a class="lnk-toggler" data-panel=".panel-signup" href="{{ url('/login') }}">Belum Memiliki Akun?</a>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
+                  
                </div>
             </div>
          </div>
       </div>
    </div>
-   <div class="modal fade bs" role="dialog" aria-labelledby="MyLarge">
-      <div class="modal-dialog modal-ls" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                  ×
-               </button>
-               
-               <img src="{{ asset ('assets/Login_files/logo_dikbud.png') }}" style="width: 30px; float: left;margin-right: 5px">
-               <h4 class="modal-title">
-                  Hubungi Kami pada Kontak Dibawah ini
-               </h4>
-            </div>
-            <div class="modal-body" id="modal" style="padding-bottom: 30px">
-               <div style="text-align: center;">
-                  <b><p>Email pengaduan</p></b>
-                  <div class="btn-style1" style="padding: 5px; border-radius: 5px; box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4)">
-                     banperkursus@kemdikbud.go.id
-                  </div>
-                  <br>
-                  <b><p>Kontak Jenis Bantuan</p></b>
-                  <div class="row">
-                     <div class="col-xs-4 col-md-4 col-lg-4">
-                        <div class="btn-style1" style="padding: 5px; border-radius: 5px; box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4)">
-                           PKW<br>
-                           021 5725503
-                        </div>
-                     </div>
-                     <div class="col-xs-4 col-md-4 col-lg-4">
-                        <div class="btn-style1" style="padding: 5px; border-radius: 5px; box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4)">
-                           Pemagangan<br>
-                           021 57854236
-                        </div>
-                     </div>
-                     <div class="col-xs-4 col-md-4 col-lg-4">
-                        <div class="btn-style1" style="padding: 5px; border-radius: 5px; box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4)">
-                           PKK<br>
-                           021 57904363
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+  
    
    <script src="{{ asset ('assets/Login_files/jquery-2.2.4.min.js') }}"></script>
    <script src="{{ asset ('assets/Login_files/bootstrap.min.js') }}"></script>
@@ -424,4 +207,5 @@
    gtag('js', new Date());
    gtag('config', 'UA-146481534-1');
 </script>
-</body></html>
+</body>
+</html>

@@ -7,7 +7,7 @@
                 <img src="{{ asset('assets/images/pns.jpeg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>PKBM Nurul Ilmi</p>
+                <p>{{auth()->user()->npsn}}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -24,10 +24,11 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
+
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="{{ route('home.index') }}"> <i class="fa fa-building-o"></i>
+                <a href="{{ route('home.dashboard') }}"> <i class="fa fa-building-o"></i>
                     <span>Menu Awal</span>
                 </a>
             </li>
