@@ -24,7 +24,6 @@ class RegisterController extends Controller
     
     public function store(Request $request)
     {
-        
         $stringnpsn = $request->input('npsn');
 
         if ($stringnpsn[0]=='P'){
@@ -53,7 +52,7 @@ class RegisterController extends Controller
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
-                'password'=> bcrypt($request['password']),
+                'password'=> bcrypt(Input::get('npsn')),
                 'role_id'=> 3,
             ]);
            
