@@ -13,11 +13,14 @@ class ProfilController extends Controller
 {
     public function index()
     {
-        $users = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
-                ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
-                ->get();
+        // $users = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
+        //         ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
+        //         ->get();
 
-        return view('admin.profil.index', compact('users'));
+        // change to auth
+        $user = Auth()->user();
+
+        return view('admin.profil.index', compact('user'));
     }
 
     public function edit($id)

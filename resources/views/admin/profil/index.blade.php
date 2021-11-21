@@ -4,12 +4,16 @@
 
 @section('content')
     <div class="row">
-        @foreach ($users as $user)
+        {{-- @foreach ($users as $user) --}}
         <div class="col-md-12">
             <div class="col-md-4">
                 <div class="box box-default">
                     <div class="box-body box-profile">
-                        <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/'.$user->foto_user) }}" alt="User profile picture">
+                        @if ($user->foto_user != null)
+                        <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/users/'.$user->foto_user) }}" alt="User profile picture">
+                        @else
+                        <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/users/profile.png') }}" alt="User profile picture">
+                        @endif
                         
                         {{-- <h3 class="profile-username text-center"><b></b></h3> --}}
 
@@ -79,7 +83,7 @@
             </div>
 
         </div>
-        @endforeach
+        {{-- @endforeach --}}
     </div>
 
 @endsection
