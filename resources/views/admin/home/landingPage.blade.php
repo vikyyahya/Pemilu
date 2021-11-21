@@ -148,81 +148,51 @@
 
 
       <section class="digital-marketing-service" id="digital-marketing-section">
+  
         <div class="row align-items-center">
-        <div class="grid-margin d-flex justify-content-center">
-            <div class="features-width">
-              <img src="{{asset ('assets/images/logo-simessi2.png')}}" width="250px" alt="" class="img-icons">
-              <h5 class="py-3">Pendidikan Anak Usia Dini</h5>
-              <p class="text-muted">Sie PAUD adalah seksie layanan pendidikan anak usia dini untuk memberikan bekal pengetahuan paling awal, keterampilan dasar, dan pembentukan karakter dalam mempersiapkan potensi diri untuk melanjutkan ke tingkat pendidikan yang lebih tinggi.</p>
-              {{-- <a href="#"><p class="readmore-link">Readmore</p></a> --}}
-            </div>
-          </div>
-
-        </div>
-        <div class="row align-items-center">
-          
-          <div class="col-8 col-lg-12 grid-margin grid-margin-lg-0" data-aos="fade-left">
-          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
+          <div class="col-md-3">
             <img src="{{asset ('landing-page/images/alur-1.png')}}" alt="" class="img-fluid">
           </div>
+          <div class="col-md-3">
             <h3 class="m-0 " style="color:rgb(94, 214, 180);">LANGKAH 1</h3>
             <h3 class="m-0 " style="color:rgb(49, 52, 235);">Daftarkan Lembaga Anda</h3>
-            <div class="col-lg-7 col-xl-6 p-0">
-              <p class="py-4 m-0 text-muted">Sebelum daftar, pastikan lembaga Anda sudah memenuhi kriteria lembaga penyelenggara pendidikan non formal yang mempunyai NPSN.</p>
-            </div>    
+            <p class="py-4 m-0 text-muted">Sebelum daftar, pastikan lembaga Anda sudah memenuhi kriteria lembaga penyelenggara pendidikan non formal yang mempunyai NPSN.</p>
           </div>
 
-        </div>
-
-
-        <div class="row align-items-center">
-
-          <div class="col-12 col-lg-7 text-center flex-item grid-margin" data-aos="fade-right">
+          <div class="col-md-3">
             <img src="{{asset ('landing-page/images/alur-2.png')}}" alt="" class="img-fluid">
           </div>
-
-          <div class="col-12 mt-5 col-lg-5 flex-item " data-aos="fade-left">
+          <div class="col-md-3">
             <h3 class="m-0  " style="color:rgb(94, 214, 180);">LANGKAH 2</h3>
             <h3 class="m-0 " style="color:rgb(49, 52, 235);">Pilih Seksie Pelayanan</h3>
-            <div class="col-lg-9 col-xl-8 p-0">
-              <p class="py-4 m-0 text-muted">Pastikan seksie pelayanan yang dipilih sesuai dengan kriteria lembaga Anda.</p>
-            </div>
+            <p class="py-4 m-0 text-muted">Pastikan seksie pelayanan yang dipilih sesuai dengan kriteria lembaga Anda.</p>
           </div>
         </div>
-
+        <br>
         <div class="row align-items-center">
-          
-          <div class="col-12 col-lg-7  grid-margin " data-aos="fade-right">
-            <h3 class="m-0 " style="color:rgb(94, 214, 180);">LANGKAH 3</h3>
-            <h3 class="m-0 " style="color:rgb(49, 52, 235);">Ajukan Dokumen</h3>
-            <div class="col-lg-7 col-xl-6 p-0">
-              <p class="py-4 m-0 text-muted">Pastikan Anda mengisi instrumen secara lengkap dan benar sesuai dokumen yang valid.</p>
-            </div>    
-          </div>
-          
-          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
+          <div class="col-md-3">
             <img src="{{asset ('landing-page/images/alur-3.png')}}" alt="" class="img-fluid">
           </div>
-        </div>
-
-
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-7 text-center flex-item grid-margin" data-aos="fade-right">
+          <div class="col-md-3">
+            <h3 class="m-0 " style="color:rgb(94, 214, 180);">LANGKAH 3</h3>
+            <h3 class="m-0 " style="color:rgb(49, 52, 235);">Ajukan Dokumen</h3>
+            <p class="py-4 m-0 text-muted">Pastikan Anda mengisi instrumen secara lengkap dan benar sesuai dokumen yang valid.</p>
+          </div>
+        
+          <div class="col-md-3">
             <img src="{{asset ('landing-page/images/alur-4.png')}}" alt="" class="img-fluid">
           </div>
-
-          <div class="col-12 mt-5 col-lg-5 flex-item grid-margin" data-aos="fade-left">
+          <div class="col-md-3">
             <h3 class="m-0  " style="color:rgb(94, 214, 180);">LANGKAH 4</h3>
             <h3 class="m-0 " style="color:rgb(49, 52, 235);">Segera Registrasi</h3>
             <a href="/login" class="btn btn-success mt-3" >Registrasi Sekarang</a>
-
             <div class="col-lg-9 col-xl-8 p-0">
-              
             </div>
           </div>
         </div>    
       </div>
     </section>     
+    <br><br>
 
     <footer class="footer" style="background-color:rgba(240, 242, 248, 0.816);" id="kontak">
       <div class="container">
