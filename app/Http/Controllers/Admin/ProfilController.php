@@ -3,23 +3,32 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\Role;
 use App\Models\Kelengkapan;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ProfilController extends Controller
 {
     public function index()
     {
-        // $users = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
-        //         ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
-        //         ->get();
+        //
+    }
 
-        // change to auth
-        $user = Auth()->user();
+    public function profil($id) {
+        $user = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
+                ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
+                ->where('users_id', $id)
+                ->get()
+                ->first();
 
+        if ($id != Auth::user()->id) {
+            return view('notfound.notfound');
+        }
+        
         return view('admin.profil.index', compact('user'));
     }
 
@@ -31,7 +40,9 @@ class ProfilController extends Controller
                 ->get()
                 ->first();
 
-        return view('admin.profil.edit', compact('edit_user'));
+        $role = Role::all();
+
+        return view('admin.profil.edit', compact('edit_user', 'role'));
     }
 
     public function update(Request $request, $id)
@@ -41,7 +52,7 @@ class ProfilController extends Controller
                 ->where('users_id', $id)
                 ->get()
                 ->first();
-        $update_user   = $request->all();
+        $update_user = $request->all();
 
         $validasi = Validator::make($update_user, [
             'npsn' => 'required',

@@ -89,11 +89,6 @@ Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatan
 //PELAPORAN
 Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan.index');
 
-//CONTROLLER PROFIL
-Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
-Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
-Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
-
 //LOGIN
 // Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 // Route::post('/login/user', [HomeController::class, 'index'])->name('login_user.index');
@@ -107,21 +102,45 @@ Route::post('tambah',[RegisterController::class, 'store']);
 
 Route::group(['middleware' => ['auth']], function (){
     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+    
     Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
 });
 
-// //ROLE PKBM
-// Route::group(['middleware' => ['auth','pkbm:2']], function (){
-//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
-// });
+//ROLE PKBM
+Route::group(['middleware' => ['auth','pkbm:2']], function (){
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
 
-// //ROLE LKP
-// Route::group(['middleware' => ['auth','lkp:4']], function (){
-//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
-// });
+    //CONTROLLER PROFIL
+    Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
+    Route::get('/profil/profil/{id}', [ProfilController::class, 'profil'])->name('profil.profil');
+    Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
+    Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
 
-// //ROLE PAUD
-// Route::group(['middleware' => ['auth','Paud:3']], function (){
-//     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
-//     Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
-// });
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+});
+
+//ROLE PAUD
+Route::group(['middleware' => ['auth','paud:3']], function (){
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+
+    //CONTROLLER PROFIL
+    Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
+    Route::get('/profil/profil/{id}', [ProfilController::class, 'profil'])->name('profil.profil');
+    Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
+    Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
+
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+});
+
+//ROLE LKP
+Route::group(['middleware' => ['auth','lkp:4']], function (){
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
+
+    //CONTROLLER PROFIL
+    Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
+    Route::get('/profil/profil/{id}', [ProfilController::class, 'profil'])->name('profil.profil');
+    Route::get('/profil/edit/{id}', [ProfilController::class, 'edit'])->name('profil.edit');
+    Route::put('/profil/update/{id}', [ProfilController::class, 'update'])->name('profil.update');
+
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+});

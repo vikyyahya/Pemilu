@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <form action="{{ route('profil.update', $edit_user->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('profil.update', Auth::user()->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -22,8 +22,7 @@
                 <div class="col-md-6">
                     <div class="form-group">    
                         <label for="deskripsi">Deskripsi</label>
-                        <textarea type="text" name="deskripsi" id="deskripsi" rows="3" class="form-control" placeholder="Deskripsi">{{ $edit_user->deskripsi ?? '' }}
-                        </textarea>
+                        <textarea type="text" name="deskripsi" id="deskripsi" rows="3" class="form-control" placeholder="Deskripsi">{{ $edit_user->deskripsi ?? '' }}</textarea>
                         <p class="text-danger">{{ $errors->first('deskripsi') }}</p>
                     </div>
                 

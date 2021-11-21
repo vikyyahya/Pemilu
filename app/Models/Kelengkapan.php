@@ -17,6 +17,7 @@ class Kelengkapan extends Model
         'deskripsi',
         'website',
         'alamat',
+        'foto_user',
         'kecamatan_id',
         'kelurahan_id',
         'nama_pimpinan_lembaga',
@@ -42,6 +43,6 @@ class Kelengkapan extends Model
     ];
 
     public function user() {
-		return $this->belongsTo(Users::class, 'users_id');
+		return $this->belongsTo(User::class, 'users_id');
 	}
 }

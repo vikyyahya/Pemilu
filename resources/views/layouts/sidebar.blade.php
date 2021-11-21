@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('profil.index') }}"> <i class="fa fa-building-o"></i>
+                <a href="{{ route('profil.profil',Auth::user()->id) }}"> <i class="fa fa-building-o"></i>
                     <span>Profil</span>
                 </a>
             </li>
