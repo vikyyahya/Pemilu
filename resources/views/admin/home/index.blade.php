@@ -17,9 +17,7 @@
 
             <div class="box box-default">
                 <div class="box-header">
-                    <h3 class="box-title">
-                        <a href="#" class="btn btn-sm btn-plus">Tambah Data <i class="fa fa-user-plus"></i> </a>
-                    </h3>
+                  
                 </div>
 
                 <div class="box-body">
@@ -36,20 +34,20 @@
                         <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>21 - November - 2021</td>
+                                    <td>Pengumuman Libur Nasional</td>
+                                    <td>Hari libur nasional pada tanggal 10 Desember .....</td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
+                                        <a href="/detail_informasi" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>22 - November - 2021</td>
+                                    <td>Rapat Bulanan</td>
+                                    <td>Rapat Bulanan di adakan pada tanggal 13 Desember ..</td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
+                                        <a href="/detail_informasi" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
                                     </td>
                                 </tr>
                         </tbody>

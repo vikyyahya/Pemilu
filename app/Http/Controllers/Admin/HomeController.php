@@ -16,4 +16,8 @@ class HomeController extends Controller
     {
         return view('admin.home.landingPage');
     }
+
+    public function detailInformation(){
+        return view('admin.home.detail_informasi');
+    }
 }

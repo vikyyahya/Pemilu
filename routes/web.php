@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Route;
 
 //CONTROLLER HOME
 Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
+Route::get('/detail_informasi', [HomeController::class, 'detailInformation'])->name('home.detail_informasi');
 
 
 //CONTROLLER PENGAJUAN

@@ -62,27 +62,44 @@ class EditKelengkapanController extends Controller
                 // 'scan_sertifikat_akreditasi'=>'required',
             ]);
             $data_user = Auth()->user();
+
             $dokumen_npwp = $request->dokumen_npwp;
             $dokumen_scan_sk_izin_opr_lembaga = $request->scan_sk_izin_opr_lembaga;
             $dokumen_scan_rek_bank =  $request->scan_rek_bank;
             $dokumen_scan_sertifikat_akreditasi = $request->scan_sertifikat_akreditasi;
             $dokumen_ttd_pimpinan_lembaga = $request->ttd_pimpinan_lembaga;
-    
-            $filename_doc_npwp = time().'docnpwp'.'_'.$data_user->id.'.'.$dokumen_npwp->extension();
-            $dokumen_npwp->move(public_path('file'),$filename_doc_npwp);
-    
-            $scan_sk_izin_opr_lembaga = time().'skizinoprlbg'.'_'.$data_user->id.'.'.$dokumen_scan_sk_izin_opr_lembaga->extension();
-            $dokumen_scan_sk_izin_opr_lembaga->move(public_path('file'),$scan_sk_izin_opr_lembaga);
-    
-            $scan_rek_bank = time().'rekbank'.'_'.$data_user->id.'.'.$dokumen_scan_rek_bank->extension();
-            $dokumen_scan_rek_bank->move(public_path('file'),$scan_rek_bank);
-    
-            $scan_sertifikat_akreditasi = time().'serakredit'.'_'.$data_user->id.'.'.$dokumen_scan_sertifikat_akreditasi->extension();
-            $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$scan_sertifikat_akreditasi);
-    
-            $ttd_pimpinan_lembaga = time().'ttd'.'_'.$data_user->id.'.'.$dokumen_ttd_pimpinan_lembaga->extension();
-            $dokumen_ttd_pimpinan_lembaga->move(public_path('file'),$ttd_pimpinan_lembaga);
-    
+
+            $filename_doc_npwp = null;
+
+            if($dokumen_npwp != null){
+                $filename_doc_npwp = time().'docnpwp'.'_'.$data_user->id.'.'.$dokumen_npwp->extension();
+                $dokumen_npwp->move(public_path('file'),$filename_doc_npwp);
+            }
+           
+            $scan_sk_izin_opr_lembaga = null;
+            if($dokumen_scan_sk_izin_opr_lembaga != null){
+                $scan_sk_izin_opr_lembaga = time().'skizinoprlbg'.'_'.$data_user->id.'.'.$dokumen_scan_sk_izin_opr_lembaga->extension();
+                $dokumen_scan_sk_izin_opr_lembaga->move(public_path('file'),$scan_sk_izin_opr_lembaga);
+            }
+
+            $scan_rek_bank = null;
+            if($dokumen_scan_rek_bank != null){
+                $scan_rek_bank = time().'rekbank'.'_'.$data_user->id.'.'.$dokumen_scan_rek_bank->extension();
+                $dokumen_scan_rek_bank->move(public_path('file'),$scan_rek_bank);
+            }
+           
+            $scan_sertifikat_akreditasi = null;
+            if($dokumen_scan_sertifikat_akreditasi != null){
+                $scan_sertifikat_akreditasi = time().'serakredit'.'_'.$data_user->id.'.'.$dokumen_scan_sertifikat_akreditasi->extension();
+                $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$scan_sertifikat_akreditasi);
+           }
+           
+           $ttd_pimpinan_lembaga = null;
+           if($dokumen_ttd_pimpinan_lembaga != null){
+                $ttd_pimpinan_lembaga = time().'ttd'.'_'.$data_user->id.'.'.$dokumen_ttd_pimpinan_lembaga->extension();
+                $dokumen_ttd_pimpinan_lembaga->move(public_path('file'),$ttd_pimpinan_lembaga);
+           }
+           
             $kelengkapan = "" ;
 
             $data_kel = Kelengkapan::where('users_id',$user->id)->first();
