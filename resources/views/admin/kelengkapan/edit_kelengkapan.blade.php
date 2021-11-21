@@ -196,7 +196,7 @@
                             <label for="alamat">Alamat Lembaga pada Buku Rekening</label>
                             <textarea name="alamat_lembaga_pd_buku_rek" id="alamat_lembaga_pd_buku_rek" rows="4"
                                 class="form-control" placeholder="Alamat Lembaga pada Buku Rekening">{{ $data_kel->alamat_lembaga_pd_buku_rek ?? '' }}
-                                    </textarea>
+                                        </textarea>
                         </div>
 
                         <div class="form-group">
@@ -212,30 +212,36 @@
                             <label>Akreditasi</label>
                             <select class="form-control" name="akreditasi" id="akreditasi" style="width: 100%;" required>
                                 <option> -- Pilih -- </option>
-                                <option
-                                {{$data_kel->akreditasi == "S" ?  'selected' : '' }}
-                                value="S">Sudah Akreditasi</option>
-                                <option
-                                {{$data_kel->akreditasi == "B" ?  'selected' : '' }}
-                                
-                                value="B">Belum Akreditasi</option>
+                                @if ($data_kel != null)
+                                    <option {{ $data_kel->akreditasi == 'S' ? 'selected' : '' }} value="S">Sudah
+                                        Akreditasi</option>
+                                    <option {{ $data_kel->akreditasi == 'B' ? 'selected' : '' }} value="B">Belum
+                                        Akreditasi</option>
+                              
+
+
+                                @endif
+
+                                @if ($data_kel == null)
+                                <option  value="S">Sudah
+                                    Akreditasi</option>
+                                <option value="B">Belum
+                                    Akreditasi</option>
+                                @endif
+
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Hasil Akreditasi</label>
-                            <input 
-                            value="{{ $data_kel->hasil_akreditasi ?? '' }}"
-                            type="text" class="form-control" id="hasil_akreditasi" name="hasil_akreditasi"
-                                placeholder="Hasil Akreditasi">
+                            <input value="{{ $data_kel->hasil_akreditasi ?? '' }}" type="text" class="form-control"
+                                id="hasil_akreditasi" name="hasil_akreditasi" placeholder="Hasil Akreditasi">
                         </div>
 
                         <div class="form-group">
                             <label for="nik">Instuisi Penerbit Akreditasi</label>
-                            <input 
-                            value="{{ $data_kel->institusi_penerbit_akreditasi ?? '' }}"
-                            
-                            type="text" class="form-control" id="institusi_penerbit_akreditasi"
+                            <input value="{{ $data_kel->institusi_penerbit_akreditasi ?? '' }}" type="text"
+                                class="form-control" id="institusi_penerbit_akreditasi"
                                 name="institusi_penerbit_akreditasi" placeholder="Hasil Akreditasi">
                         </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Register;
+use App\Models\Kelengkapan;
 
 
 use Validator;
@@ -36,6 +37,10 @@ class RegisterController extends Controller
                 'password'=> bcrypt($request['password']),
                 'role_id'=> 2,
             ]);
+            $kelengkapan = new Kelengkapan;
+            $kelengkapan->users_id = $daftar->id;
+            $kelengkapan->save();
+
         }else if ($stringnpsn[0]=='L') {
            
             $daftar = Register::create([
@@ -46,6 +51,10 @@ class RegisterController extends Controller
                 'password'=> bcrypt($request['password']),
                 'role_id'=> 3,
             ]);
+
+            $kelengkapan = new Kelengkapan;
+            $kelengkapan->users_id = $daftar->id;
+            $kelengkapan->save();
     
         }else if ($stringnpsn[0].$stringnpsn[1] =='TK'){
             $daftar = Register::create([
@@ -56,6 +65,10 @@ class RegisterController extends Controller
                 'password'=> bcrypt($request['password']),
                 'role_id'=> 3,
             ]);
+
+            $kelengkapan = new Kelengkapan;
+            $kelengkapan->users_id = $daftar->id;
+            $kelengkapan->save();
            
         }
         
