@@ -94,6 +94,6 @@ class ProfilController extends Controller
         }
 
         $user->update($update_user);
-        return redirect()->route('profil.index', $id)->with('status', 'Data berhasil diubah');
+        return redirect()->route('profil.profil', $id)->with('status', 'Data berhasil diubah');
     }
 }
