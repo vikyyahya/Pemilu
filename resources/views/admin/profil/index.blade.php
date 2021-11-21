@@ -3,7 +3,7 @@
 @section('title', 'Profil')
 
 @section('content')
-@if (Auth::user()->role_id != 3 )
+@if (Auth::user()->role_id != 1 )
     <div class="row">
         {{-- @foreach ($users as $user) --}}
         <div class="col-md-12">
