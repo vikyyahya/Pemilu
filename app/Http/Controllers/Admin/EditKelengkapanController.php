@@ -29,38 +29,37 @@ class EditKelengkapanController extends Controller
 
     public function create(Request $request)
     {
+        // return $request;
         $user = Auth()->user();
 
         // Auth::login($user);
         if($user != null){
 
             $request->validate([
-                'alamat'=>'required', 
-                'kecamatan'=>'required',
-                'kelurahan'=>'required',
-                'nama_pimpinan_lembaga'=>'required',
-                'no_pimpinan'=>'required',
-                'npwp'=>'required',
-                'nama_lembaga_npwp'=>'required',
-                'alamat_rekening'=>'required',
-                'no_sk_pendirian_lembaga'=>'required',
-                'tgl_sk_pendiran_lembaga'=>'required',
-                'no_sk_izin_opr_lembaga'=>'required',
-                'tgl_sk_izin_opr_lembaga'=>'required',
-                'no_rek_bank_lembaga'=>'required',
-                'rek_bank_atas_nama'=>'required',
-                'nama_bank'=>'required',
-                'cab_rek_bank'=>'required',
-                'alamat_lembaga_pd_buku_rek'=>'required',
-                'akreditasi'=>'required',
-                'hasil_akreditasi'=>'required',
-                'institusi_penerbit_akreditasi'=>'required',
+                // 'alamat'=>'required', 
+                // 'kecamatan'=>'required',
+                // 'kelurahan'=>'required',
+                // 'nama_pimpinan_lembaga'=>'required',
+                // 'no_pimpinan'=>'required',
+                // 'npwp'=>'required',
+                // 'nama_lembaga_npwp'=>'required',
+                // 'no_sk_pendirian_lembaga'=>'required',
+                // 'tgl_sk_pendiran_lembaga'=>'required',
+                // 'no_sk_izin_opr_lembaga'=>'required',
+                // 'tgl_sk_izin_opr_lembaga'=>'required',
+                // 'no_rek_bank_lembaga'=>'required',
+                // 'rek_bank_atas_nama'=>'required',
+                // 'nama_bank'=>'required',
+                // 'cab_rek_bank'=>'required',
+                // 'alamat_lembaga_pd_buku_rek'=>'required',
+                // 'akreditasi'=>'required',
+                // 'hasil_akreditasi'=>'required',
+                // 'institusi_penerbit_akreditasi'=>'required',
     
-                'dokumen_npwp'=>'required',
-                'scan_sk_izin_opr_lembaga'=>'required',
-                'scan_rek_bank'=>'required',
-                'scan_sertifikat_akreditasi'=>'required',
-                
+                // 'dokumen_npwp'=>'required',
+                // 'scan_sk_izin_opr_lembaga'=>'required',
+                // 'scan_rek_bank'=>'required',
+                // 'scan_sertifikat_akreditasi'=>'required',
             ]);
             $data_user = Auth()->user();
             $dokumen_npwp = $request->dokumen_npwp;
@@ -82,7 +81,7 @@ class EditKelengkapanController extends Controller
             $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$scan_sertifikat_akreditasi);
     
             $ttd_pimpinan_lembaga = time().'ttd'.'_'.$data_user->id.'.'.$dokumen_ttd_pimpinan_lembaga->extension();
-            $dokumen_scan_sertifikat_akreditasi->move(public_path('file'),$ttd_pimpinan_lembaga);
+            $dokumen_ttd_pimpinan_lembaga->move(public_path('file'),$ttd_pimpinan_lembaga);
     
             $kelengkapan = "" ;
 
@@ -127,7 +126,7 @@ class EditKelengkapanController extends Controller
                 $kelengkapan->update();
             }
     
-            return view('admin.kelengkapan.index');
+            return redirect()->route('kelengkapan.index');
 
         }else{
 

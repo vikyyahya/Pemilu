@@ -117,8 +117,8 @@
 
                         <div class="form-group">
                             <label for="foto_ka">Dokumen NPWP</label>
-                            <input type="file" class="form-control" id="dokumen_npwp" name="dokumen_npwp"
-                                placeholder="Scan K-A">
+                            <input value="{{asset('file/'.$data_kel->dokumen_npwp)}}" type="file" class="form-control" id="dokumen_npwp" name="dokumen_npwp"
+                                placeholder="">
                             <p class="text-danger">File PDF Max 5MB</p>
                         </div>
 
