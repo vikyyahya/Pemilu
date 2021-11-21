@@ -40,8 +40,7 @@ class RegisterController extends Controller
             $kelengkapan->users_id = $daftar->id;
             $kelengkapan->save();
 
-        }else if ($stringnpsn[0]=='L') {
-           
+        }else if ($stringnpsn[0].$stringnpsn[1] =='TK'){
             $daftar = Register::create([
                 'npsn'=> $request->npsn,
                 'nama_lembaga'=> $request->nama_lembaga,
@@ -54,21 +53,21 @@ class RegisterController extends Controller
             $kelengkapan = new Kelengkapan;
             $kelengkapan->users_id = $daftar->id;
             $kelengkapan->save();
-    
-        }else if ($stringnpsn[0].$stringnpsn[1] =='TK'){
+
+        }else if ($stringnpsn[0]=='L') {
+           
             $daftar = Register::create([
                 'npsn'=> $request->npsn,
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
-                'password'=> bcrypt(Input::get('npsn')),
-                'role_id'=> 3,
+                'password'=> bcrypt($request['password']),
+                'role_id'=> 4,
             ]);
 
             $kelengkapan = new Kelengkapan;
             $kelengkapan->users_id = $daftar->id;
-            $kelengkapan->save();
-           
+            $kelengkapan->save();       
         }
         
         return redirect('login');

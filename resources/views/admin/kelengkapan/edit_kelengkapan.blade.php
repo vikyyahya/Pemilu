@@ -210,8 +210,8 @@
 
                         <div class="form-group">
                             <label>Akreditasi</label>
-                            <select class="form-control" name="akreditasi" id="akreditasi" style="width: 100%;" required>
-                                <option> -- Pilih -- </option>
+                            <select class="form-control" name="akreditasi" id="akreditasi" style="width: 100%;">
+                                <option value = {{null}}> -- Pilih -- </option>
                                 @if ($data_kel != null)
                                     <option {{ $data_kel->akreditasi == 'S' ? 'selected' : '' }} value="S">Sudah
                                         Akreditasi</option>

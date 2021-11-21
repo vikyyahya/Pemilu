@@ -3,6 +3,7 @@
 @section('title', 'Profil')
 
 @section('content')
+@if (Auth::user()->role_id != 3 )
     <div class="row">
         {{-- @foreach ($users as $user) --}}
         <div class="col-md-12">
@@ -10,7 +11,7 @@
                 <div class="box box-default">
                     <div class="box-body box-profile">
                         @if ($user->foto_user != null)
-                        <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/users/'.$user->foto_user) }}" alt="User profile picture">
+                        <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/'.$user->foto_user) }}" alt="User profile picture">
                         @else
                         <img class="profile-user-img img-responsive img-circle" src="{{ asset('uploads/users/profile.png') }}" alt="User profile picture">
                         @endif
@@ -22,7 +23,7 @@
                     </div>
                     <div class="box-footer">
                         <div class="text-center">
-                            <a href="{{ route('profil.edit', $user->id) }}" class="btn btn-sm btn-plus">Edit Profil</a>
+                            <a href="{{ route('profil.edit', Auth::user()->id) }}" class="btn btn-sm btn-plus">Edit Profil</a>
                             {{-- <a href="#" class="btn btn-sm btn-danger">Edit Password</a> --}}
                         </div>
                     </div>
@@ -85,5 +86,5 @@
         </div>
         {{-- @endforeach --}}
     </div>
-
+    @endif
 @endsection

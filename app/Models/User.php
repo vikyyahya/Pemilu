@@ -24,8 +24,8 @@ class User extends Authenticatable
         'npsn',
         'nama_lembaga',
         'email',
-        'role_id',
-        'no_telepon'
+        'no_telepon',
+        'role_id'
     ];
 
     /**
