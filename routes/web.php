@@ -37,9 +37,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-//CONTROLLER HOME
-Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
+Route::group(['middleware' => ['guest']], function (){
+    //CONTROLLER HOME
+    Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
 
+    //LOGIN
+    Route::get('/login',[LoginController::class, 'index'])->name('login');
+    Route::post('/loginProses', [LoginController::class, 'loginProses'])->name('loginProses');
+
+    //REGISTER
+    Route::get('register',[RegisterController::class, 'index'])->name('register.index');
+    Route::post('tambah',[RegisterController::class, 'store']);
+});
 
 //CONTROLLER PENGAJUAN
 Route::get('/pengajuan', [PengajuanController::class, 'index'])->name('pengajuan.index');
@@ -72,6 +81,7 @@ Route::get('/tutor/create', [TutorController::class, 'create'])->name('tutor.cre
 Route::get('/kelengkapan', [KelengkapanController::class, 'index'])->name('kelengkapan.index');
 Route::get('/editkelengkapan', [EditKelengkapanController::class, 'index'])->name('editkelengkapan.index');
 Route::post('/addKelengkapan', [EditKelengkapanController::class, 'create'])->name('addKelengkapan.create');
+
 //CONTROLLER RAB
 Route::get('/rab', [RabController::class, 'index'])->name('rab.index');
 Route::get('/rab/create', [RabController::class, 'create'])->name('rab.create');
@@ -88,17 +98,6 @@ Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatan
 
 //PELAPORAN
 Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan.index');
-
-//LOGIN
-// Route::get('/login', [LoginController::class, 'index'])->name('login.index');
-// Route::post('/login/user', [HomeController::class, 'index'])->name('login_user.index');
-Route::get('/login',[LoginController::class, 'index'])->name('login');
-Route::post('/loginProses', [LoginController::class, 'loginProses'])->name('loginProses');
-
-//REGISTER
-Route::get('register',[RegisterController::class, 'index'])->name('register.index');
-Route::post('tambah',[RegisterController::class, 'store']);
-
 
 Route::group(['middleware' => ['auth']], function (){
     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');
