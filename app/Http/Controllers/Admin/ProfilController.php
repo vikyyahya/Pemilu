@@ -52,12 +52,13 @@ class ProfilController extends Controller
                 ->where('users_id', $id)
                 ->get()
                 ->first();
+        
         $update_user = $request->all();
 
         $validasi = Validator::make($update_user, [
             'npsn' => 'required',
             'nama_lembaga' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'no_telepon' => 'required',
             'alamat' => 'required',
             'website' => 'required',
