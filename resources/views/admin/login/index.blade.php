@@ -42,9 +42,12 @@
                      <p style="font-size: 24px; color:rgb(255, 255, 255);" class="text-uppercase"><strong>SIMESSI PAUD-DIKMAS</strong></p>
                      <a class="btn btn-lg btn-style2 btn-block" href="/"><font style="color:rgb(127, 70, 206)">Halaman Utama</font></a>
                      <br>
-                     <img src="{{ asset ('assets/images/logoo1-removebg-preview.png') }}" width="50px" alt="" style="margin-right:20px">
-                     <img src="{{ asset ('assets/images/logoo2-removebg-preview.png') }}" width="40px" alt="" style="margin-right:20px">
-                     <img src="{{ asset ('assets/images/logoo3-removebg-preview.png') }}" width="50px" alt="" >
+                     
+                     <img src="{{ asset ('assets/images/logoo1-removebg-preview.png') }}" width="60px" alt="">
+                     <b style="margin:20px; font-size:24px;">PAUD TK</b>
+                     <img src="{{ asset ('assets/images/logoo3-removebg-preview.png') }}" width="60px" alt="" >
+                     
+                  
                   </div>
                   
                </div>
