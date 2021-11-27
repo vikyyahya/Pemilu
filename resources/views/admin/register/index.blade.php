@@ -8,7 +8,7 @@
    <meta name="keywords" content="">
    <meta name="author" content="">
    <title>SIMESSI - Kabupaten Tangerang</title>
-   <link rel="shortcut icon" type="image/icon" href="https://banper.binsuslat.kemdikbud.go.id/assets/login/images/favicon.png">
+   <link rel="shortcut icon" type="image/icon" href="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}">
    {{-- <link rel="stylesheet" href="./Login_files/lightgallery.css"> --}}
    {{-- <link rel="stylesheet" href="./Login_files/login-style.css"> --}}
    <link rel="stylesheet" href="{{ asset ('assets/Login_files/login-style.css') }}">
