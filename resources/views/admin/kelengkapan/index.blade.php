@@ -36,7 +36,7 @@
                                         
                                         <tr>
                                             <th style="width:50%">NPSN</th>
-                                            <td>{{ $user->npsn ?? '-' }} </td>
+                                            <td>{{ $user->nik ?? '-' }} </td>
                                         </tr>
                                         <tr>
                                             <th>Nama Lembaga</th>

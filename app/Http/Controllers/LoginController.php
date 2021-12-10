@@ -16,7 +16,7 @@ class LoginController extends Controller
     }
     public function loginProses(Request $request)
     {
-            if (!Auth::attempt(['npsn'=> $request->npsn, 'password'=>$request->password])){
+            if (!Auth::attempt(['nik'=> $request->nik, 'password'=>$request->password])){
                 // dd('ELSE');
                 session(['berhasil_login'=>true]);
                 return redirect()->route('login');       

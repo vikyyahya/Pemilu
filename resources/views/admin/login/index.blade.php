@@ -7,7 +7,7 @@
    <meta name="description" content="">
    <meta name="keywords" content="">
    <meta name="author" content="">
-   <title>SIMESSI - Kabupaten Tangerang</title>
+   <title>Pemilu</title>
    <link rel="shortcut icon" type="image/icon" href="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}">
    {{-- <link rel="stylesheet" href="./Login_files/lightgallery.css"> --}}
    {{-- <link rel="stylesheet" href="./Login_files/login-style.css"> --}}
@@ -37,17 +37,12 @@
                <div class="brand-col">
                   <div class="headline text-center">
                      <div class="brand-logo">
-                        <img src="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}" width="200" height="230" alt="brand-logo">
+                        {{--  --}}
                      </div>
-                     <p style="font-size: 24px; color:rgb(255, 255, 255);" class="text-uppercase"><strong>SIMESSI PAUD-DIKMAS</strong></p>
-                     <a class="btn btn-lg btn-style2 btn-block" href="/"><font style="color:rgb(127, 70, 206)">Halaman Utama</font></a>
+                     <p style="font-size: 24px; color:rgb(255, 255, 255);" class="text-uppercase"><strong>Pemilu</strong></p>
+                     {{-- <a class="btn btn-lg btn-style2 btn-block" href="/"><font style="color:rgb(127, 70, 206)">Halaman Utama</font></a> --}}
                      <br>
                      
-                     <img src="{{ asset ('assets/images/logoo1-removebg-preview.png') }}" width="60px" alt="">
-                     <b style="margin:20px; font-size:24px;">PAUD TK</b>
-                     <img src="{{ asset ('assets/images/logoo3-removebg-preview.png') }}" width="60px" alt="" >
-                     
-                  
                   </div>
                   
                </div>
@@ -83,7 +78,7 @@
                            <form name="loginForm"  action="{{route('loginProses')}}" method="POST">
                               @csrf
                               <div class="form-group wrap-input">
-                                 <input type="text" class="form-control" name="npsn" placeholder="Masukkan NPSN..." id="npsn" required="" autofocus="" value="">
+                                 <input type="text" class="form-control" name="nik" placeholder="Masukkan NPSN..." id="nik" required="" autofocus="" value="">
                                  <span class="focus-input"></span>
                               </div>
                               <div class="form-group wrap-input">
@@ -98,14 +93,13 @@
                                  </div>
                                  <div class="col-xs-6 col-sm-6">
                                     <p class="forgotPwd">
-                                       <a class="lnk-toggler" data-panel=".panel-forgot" href="">Lupa password?</a>
+                                       {{--  --}}
                                     </p>
                                  </div>
                               </div>
                               <div class="form-group">
                                  <button class="btn btn-lg btn-style1 btn-block" type="submit">Masuk</button>
                                  <br>
-                                 <a href="{{url('register')}}">Belum Memiliki Akun? Silahkan Registrasi dahulu.</a>
                               </div>
                            </form>
                         </div>

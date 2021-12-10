@@ -29,7 +29,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="nama">NPSN</label>
-                            <input readonly value="{{ $user->npsn }}" type="text" class="form-control" id="npsn"
+                            <input readonly value="{{ $user->nik }}" type="text" class="form-control" id="npsn"
                                 name="npsn" placeholder="NPSN">
                         </div>
 

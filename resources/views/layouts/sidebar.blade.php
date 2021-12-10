@@ -7,7 +7,7 @@
                 <img src="{{ asset('assets/images/pns.jpeg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>{{auth()->user()->npsn}}</p>
+                <p>{{auth()->user()->nik}}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -32,58 +32,16 @@
                     <span>Menu Awal</span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route('profil.profil',Auth::user()->id) }}"> <i class="fa fa-building-o"></i>
                     <span>Profil</span>
                 </a>
+            </li> --}}
+            {{-- <li><a href="{{ route('kelengkapan.index') }}"><i class="fa fa-book"></i> <span>Kelengkapan</span></a> --}}
             </li>
-            <li><a href="{{ route('kelengkapan.index') }}"><i class="fa fa-book"></i> <span>Kelengkapan</span></a>
+            <li><a href="{{ route('dpt.index') }}"><i class="fa fa-book"></i> <span>Data DPT</span></a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i> <span>Pengajuan</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ route('pengajuan.index') }}"><i class="fa fa-circle-o"></i> Daftar Pengajuan</a>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-circle-o"></i> <span>Calon Peserta UPK</U></span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ route('upka.index') }}"><i class="fa fa-circle-o"></i> Paket A</a>
-                            </li>
-                            <li><a href="{{ route('upkbc.index') }}"><i class="fa fa-circle-o"></i> Paket B/C</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ route('sarana.index') }}"><i class="fa fa-circle-o"></i> Sara Prasarana</a></li>
-                    <li><a href="{{ route('jadwal.index') }}"><i class="fa fa-circle-o"></i> Jadwal Pelajaran</a></li>
-                    <li><a href="{{ route('tutor.index') }}"><i class="fa fa-circle-o"></i> Data Tutor</a></li>
-                    <li><a href="{{ route('rab.index') }}"><i class="fa fa-circle-o"></i> Rencana Anggaran Belanja</a></li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-circle-o"></i> <span>Calon Peserta</U></span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ route('a.index') }}"><i class="fa fa-circle-o"></i> Paket A</a>
-                            </li>
-                            <li><a href="{{ route('bc.index') }}"><i class="fa fa-circle-o"></i> Paket B/C</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="{{ route('pelaporan.index') }}"><i class="fa fa-book"></i> <span>Pelaporan</span></a>
+            <li><a href="{{ route('keberatan.index') }}"><i class="fa fa-book"></i> <span>Data Keberatan</span></a>
            
         </ul>
     </section>

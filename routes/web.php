@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\CalonPesertaUpkAController;
 use App\Http\Controllers\Admin\CalonPesertaUpkBCController;
 use App\Http\Controllers\Admin\SaranaPrasaranaController;
 use App\Http\Controllers\Admin\JadwalPelajaranController;
-use App\Http\Controllers\Admin\KelengkapanController;
+use App\Http\Controllers\Admin\DptController;
+use App\Http\Controllers\Admin\KeberatanController;
 use App\Http\Controllers\Admin\EditKelengkapanController;
 use App\Http\Controllers\Admin\TutorController;
 use App\Http\Controllers\Admin\RabController;
@@ -39,7 +40,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['guest']], function (){
     //CONTROLLER HOME
-    Route::get('/', [HomeController::class, 'landingPage'])->name('home.landingPage');
+    Route::get('/',[LoginController::class, 'index'])->name('home.landingPage');
 
     //LOGIN
     Route::get('/login',[LoginController::class, 'index'])->name('login');
@@ -80,8 +81,10 @@ Route::get('/jadwal-pelajaran/create', [JadwalPelajaranController::class, 'creat
 Route::get('/tutor', [TutorController::class, 'index'])->name('tutor.index');
 Route::get('/tutor/create', [TutorController::class, 'create'])->name('tutor.create');
 
-//CONTROLLER KELENGKAPAN
-Route::get('/kelengkapan', [KelengkapanController::class, 'index'])->name('kelengkapan.index');
+//CONTROLLER DPT
+Route::get('/dpt', [DptController::class, 'index'])->name('dpt.index');
+
+
 Route::get('/editkelengkapan', [EditKelengkapanController::class, 'index'])->name('editkelengkapan.index');
 Route::post('/addKelengkapan', [EditKelengkapanController::class, 'create'])->name('addKelengkapan.create');
 
@@ -101,6 +104,7 @@ Route::get('/catatan-penilaian-b', [CalonPesertaUpkBCController::class, 'catatan
 
 //PELAPORAN
 Route::get('/pelaporan', [PelaporanController::class, 'index'])->name('pelaporan.index');
+Route::get('/keberatan', [KeberatanController::class, 'index'])->name('keberatan.index');
 
 Route::group(['middleware' => ['auth']], function (){
     Route::get('/dashboard', [HomeController::class, 'index'])->name('home.dashboard');

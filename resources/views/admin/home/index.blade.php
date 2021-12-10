@@ -21,37 +21,8 @@
                 </div>
 
                 <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>NO</th>
-                                <th>Tanggal</th>
-                                <th>Judul Informasi</th>
-                                <th>Isi Informasi</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>21 - November - 2021</td>
-                                    <td>Pengumuman Libur Nasional</td>
-                                    <td>Hari libur nasional pada tanggal 10 Desember .....</td>
-                                    <td class="text-center">
-                                        <a href="/detail_informasi" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>22 - November - 2021</td>
-                                    <td>Rapat Bulanan</td>
-                                    <td>Rapat Bulanan di adakan pada tanggal 13 Desember ..</td>
-                                    <td class="text-center">
-                                        <a href="/detail_informasi" class="btn btn-sm btn-info"> <i class="fa fa-eye"></i> </a>
-                                    </td>
-                                </tr>
-                        </tbody>
-                    </table>
+                    
+                    
                 </div>
             </div>
 

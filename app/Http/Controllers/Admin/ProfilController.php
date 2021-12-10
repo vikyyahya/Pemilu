@@ -20,7 +20,7 @@ class ProfilController extends Controller
 
     public function profil($id) {
         $user = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
-                ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
+                ->select('kelengkapan.*', 'nik', 'nama_lembaga', 'email', 'no_telepon')
                 ->where('users_id', $id)
                 ->get()
                 ->first();
@@ -35,7 +35,7 @@ class ProfilController extends Controller
     public function edit($id)
     {
         $edit_user = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
-                ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
+                ->select('kelengkapan.*', 'nik', 'nama_lembaga', 'email', 'no_telepon')
                 ->where('users_id', $id)
                 ->get()
                 ->first();
@@ -48,7 +48,7 @@ class ProfilController extends Controller
     public function update(Request $request, $id)
     {
         $user = Kelengkapan::leftJoin('users', 'users.id', 'kelengkapan.users_id')
-                ->select('kelengkapan.*', 'npsn', 'nama_lembaga', 'email', 'no_telepon')
+                ->select('kelengkapan.*', 'nik', 'nama_lembaga', 'email', 'no_telepon')
                 ->where('users_id', $id)
                 ->get()
                 ->first();
@@ -56,7 +56,7 @@ class ProfilController extends Controller
         $update_user = $request->all();
 
         $validasi = Validator::make($update_user, [
-            'npsn' => 'required',
+            'nik' => 'required',
             'nama_lembaga' => 'required',
             'email' => 'required|email',
             'no_telepon' => 'required',

@@ -28,8 +28,8 @@
                 
                     <div class="form-group">
                         <label for="npsn">NPSN</label>
-                        <input type="text" class="form-control" id="npsn" name="npsn" value="{{ $edit_user->npsn ?? '' }}" placeholder="NPSN">
-                        <p class="text-danger">{{ $errors->first('npsn') }}</p>
+                        <input type="text" class="form-control" id="npsn" name="npsn" value="{{ $edit_user->nik ?? '' }}" placeholder="NPSN">
+                        <p class="text-danger">{{ $errors->first('nik') }}</p>
                     </div>
                 
                     <div class="form-group">

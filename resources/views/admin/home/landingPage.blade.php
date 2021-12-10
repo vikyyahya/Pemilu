@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SIMESSI</title>
+  <title>Pemilu</title>
   <link rel="shortcut icon" type="image/icon" href="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,7 @@
         {{-- <img src="images/Group2.svg" alt=""> --}}
         <img src="{{ asset ('assets/images/Logo-kabupaten-Tangerang.png') }}" width="70" height="80" alt="">
        <div class="ml-3">
-        <h3 style="color:rgb(136, 49, 235);">SIMESSI </h3>
-        <h5 style="color:rgb(136, 49, 235);">PAUD DIKMAS</h5>
+        <h3 style="color:rgb(136, 49, 235);">Pemilu </h3>
        </div>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="mdi mdi-menu navbar-toggler-icon"></span>

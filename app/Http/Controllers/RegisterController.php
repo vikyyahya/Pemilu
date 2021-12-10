@@ -25,11 +25,11 @@ class RegisterController extends Controller
     
     public function store(Request $request)
     {
-        $stringnpsn = $request->input('npsn');
+        $stringnpsn = $request->input('nik');
 
         if ($stringnpsn[0]=='P'){
             $daftar = Register::create([
-                'npsn'=> $request->npsn,
+                'nik'=> $request->nik,
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
@@ -42,7 +42,7 @@ class RegisterController extends Controller
 
         }else if ($stringnpsn[0].$stringnpsn[1] =='TK'){
             $daftar = Register::create([
-                'npsn'=> $request->npsn,
+                'nik'=> $request->nik,
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,
@@ -57,7 +57,7 @@ class RegisterController extends Controller
         }else if ($stringnpsn[0]=='L') {
            
             $daftar = Register::create([
-                'npsn'=> $request->npsn,
+                'nik'=> $request->nik,
                 'nama_lembaga'=> $request->nama_lembaga,
                 'email' => $request->email,
                 'no_telepon'=> $request->no_telepon,

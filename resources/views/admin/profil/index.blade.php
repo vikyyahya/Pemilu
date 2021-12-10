@@ -46,7 +46,7 @@
         
                         <strong><i class="fa fa-id-badge margin-r-5"></i> NPSN</strong>
         
-                        <p class="text-muted">{{ $user->npsn ?? '' }}</p>
+                        <p class="text-muted">{{ $user->nik ?? '' }}</p>
         
                         <hr>
 
